@@ -52,19 +52,20 @@ class Boitier extends React.Component {
             <div>
                 <form onSubmit={this.addBoitier}>
                     <div>
-                        <select value={this.state.RGB} onChange={this.updateInput}>
+                        <select onChange={this.updateInput}>
                             <option value="true">true</option>
                             <option value="false">false</option>
                         </select>
                     </div>   
                     <div>
-                        <select value={this.state["alim inclus"]}>
+                        <select onChange={this.updateInput}>
                             <option value="true">true</option>
                             <option value="false">false</option>
                         </select>
                     </div>   
                     <div>  
-                        <select value={this.state.couleur}>
+                        <select value={this.state.couleur} onChange={this.updateInput
+                        }>
                             <option value="Noir, Transparent">Noir, Transparent</option>
                             <option value="Noir, Blanc, Transparent">Noir, Blanc, Transparent</option>
                             <option value="Blanc, Transparent">Blanc, Transparent</option>
