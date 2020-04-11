@@ -14005,7 +14005,7 @@ a.card {
   border: 0; }
   .card-showcase a {
     display: block; }
-  .card-showcase img {
+  .card-showcase img { 
     border-radius: 0.25rem; }
 
 .card-component {
@@ -16256,8 +16256,8 @@ a.card {
   position: absolute;
   border-radius: 50%;
   top: 50%;
-  width: 4rem;
-  height: 4rem;
+  width: 1rem;
+  height: 1rem;
   text-align: center;
   z-index: 20; }
   .owl-carousel .owl-nav button.owl-prev::before,

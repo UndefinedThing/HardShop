@@ -35,7 +35,7 @@
 
       $('.owl-carousel').each(function() {
         var a = $(this),
-          items = a.data('items') || [1,1,1,1],
+          items = a.data('items') || [1,2,3,4],
           margin = a.data('margin'),
           loop = a.data('loop'),
           nav = a.data('nav'),
@@ -47,8 +47,8 @@
           autoheight = a.data('autoheight');
 
         var options = {
-          nav: nav || false,
-          loop: loop || false,
+          nav: nav || true,
+          loop: loop || true,
           dots: dots || false,
           center: center || false,
           autoplay: autoplay || false,
@@ -320,4 +320,4 @@
     fn.Launch();
   });
 
-})(jQuery);
+})(jQuery); 

@@ -1,10 +1,23 @@
 import React, { Component } from "react";
+import SimpleImageSlider from "react-simple-image-slider";
 
 import Header from "../components/header";
 import Footer from "../components/footer";
+import layout1 from "../assets/images/layout-1.png";
+import layout2 from "../assets/images/layout-2.png";
+import changelog from "../assets/images/changelog.png";
+import layout4 from "../assets/images/layout-4.png";
+import helpcenter from "../assets/images/helpcenter.png";
 
 class Home extends Component {
     render() {
+      const images = [
+        { url: {layout1} },
+        { url: {layout2} },
+        { url: {changelog} },
+        { url: {layout4} },
+        { url: {helpcenter} }
+      ];
         return(
             <div className="wrapper">
                 <Header />
@@ -27,36 +40,18 @@ class Home extends Component {
   {/* / hero */}
   <section className="half bg-primary">
     <div className="half-bg bg-light pb-10">
-      <div className="image image-gradient-vertical" style={{backgroundImage: 'url(../../assets/images/image.jpg)'}} />
+      <div className="image image-gradient-vertical" style={{backgroundImage: 'url(../../../assets/images/image.jpg)'}} />
     </div>
-    <div className="container-full mb-10">
+    <div className="container-full mb-5">
       <div className="row gutter-0 justify-content-center">
         <div className="col-12">
           <div className="owl-carousel owl-carousel-showcase owl-carousel-fluid" data-items="[3,2,1]" data-center="true" data-margin={30} data-nav="true" data-loop="true">
             <div className="card card-showcase lift">
-              <a href="html/docs/layout-1.html">
-                <img className="card-img-top" src="assets/images/layout-1.png" alt="Documentation Layout 1" />
-              </a>
-            </div>
-            <div className="card card-showcase lift">
-              <a href="html/docs/layout-2.html">
-                <img className="card-img-top" src="assets/images/layout-2.png" alt="Documentation Layout 2" />
-              </a>
-            </div>
-            <div className="card card-showcase lift">
-              <a href="html/pages/changelog.html">
-                <img className="card-img-top" src="assets/images/changelog.png" alt="Changelog" />
-              </a>
-            </div>
-            <div className="card card-showcase lift">
-              <a href="html/docs/layout-4.html">
-                <img className="card-img-top" src="assets/images/layout-4.png" alt="Documentation Layout 4" />
-              </a>
-            </div>
-            <div className="card card-showcase lift">
-              <a href="html/help/homepage-1.html">
-                <img className="card-img-top" src="assets/images/helpcenter.png" alt="Helpcenter" />
-              </a>
+              <SimpleImageSlider
+                    width={1370}
+                    height={504}
+                    images={images}
+                />
             </div>
           </div>
         </div>
@@ -207,7 +202,7 @@ class Home extends Component {
         <div className="col-6 col-md-4 col-lg-2">
           <a href="documentation/components/accordions.html" title="Accordions" className="card bordered highlight">
             <div className="card-body text-center px-0 py-1 py-md-2 py-lg-3">
-              <h5 className="fs-18">Accordions</h5>
+              <h5 className="fs-18">Processeur</h5>
             </div>
           </a>
         </div>
