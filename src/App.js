@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "./assets/css/style.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Case from "./components/Case";
 import WC from "./components/Cooling";
@@ -9,8 +9,8 @@ import MB from "./components/motherboard";
 import PSU from "./components/Powersupply";
 import CPU from "./components/proco";
 import RAM from "./components/RAM";
-// import Header from "./pages/header";
 import Search from "./pages/Search";
+import Home from "./pages/home";
 
 const firebase = require("firebase");
 require("firebase/firestore");
@@ -48,8 +48,8 @@ function App() {
           <hr />
 
           <Switch>
-            <Route exact path="/">
-              <home />
+            <Route exact path="/" component={Home}>
+              <Home />
             </Route>
             <Route path="/CRUDs">
               <Crud />
