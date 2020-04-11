@@ -11,12 +11,13 @@ export default class Search extends React.Component {
       oneSearchDone: false,
       results: [],
       searchText: "",
-      categorie: "CPU's",
+      categorie: "",
     };
   }
 
   search() {
     this.setState({ isLoading: true });
+
     Helper.search(this.state.searchText, this.state.categorie)
       .then((response) =>
         this.setState({
@@ -29,6 +30,7 @@ export default class Search extends React.Component {
   }
 
   updateInput = (e) => {
+    console.log(e);
     this.setState({
       [e.target.name]: e.target.value,
     });
@@ -39,7 +41,7 @@ export default class Search extends React.Component {
       <div>
         <div>
           <div>
-            <select value={this.state.categorie} onChange={this.updateInput}>
+            <select onChange={this.updateInput}>
               <option value="CPU's">CPU</option>
               <option value="Case">Case</option>
               <option value="Cooling">Water Cooling</option>
@@ -53,8 +55,9 @@ export default class Search extends React.Component {
           </div>
           <span>Recherche</span>
           <input
-            type="text"
-            style={{ marginLeft: "16px", marginRight: "16px" }}
+            type="search"
+            style={{ marginLeft: "16px", marginRight: "16px", width: "300px" }}
+            placeholder={`Rechercher dans la catégorie ${this.state.categorie}`}
           />
           <button onClick={() => this.search()}>Rechercher</button>
         </div>

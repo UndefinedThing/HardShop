@@ -3,8 +3,14 @@ require("firebase/firestore");
 
 const Helper = {
   search: (searchText, categorie) => {
-    var db = firebase.firestore();
-    return db.collection(categorie).where("nom", "==", searchText).get();
+    console.log(searchText, categorie);
+    const db = firebase.firestore();
+    const response = db
+      .collection(categorie)
+      .where("nom", "==", searchText)
+      .get();
+    console.log(response);
+    return response;
   },
 };
 
