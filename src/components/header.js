@@ -20,15 +20,15 @@ class Header extends Component {
                             <a className="nav-link active" href="/">Home</a>
                             </li>
                             <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle" href="/" id="dropdown-1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Documentation
-                            </a>
-                            <div className="dropdown-menu" aria-labelledby="dropdown-1">
-                                <a className="dropdown-item" href="html/docs/layout-1.html">Layout 1</a>
-                                <a className="dropdown-item" href="html/docs/layout-2.html">Layout 2</a>
-                                <a className="dropdown-item" href="html/docs/layout-3.html">Layout 3</a>
-                                <a className="dropdown-item" href="html/docs/layout-4.html">Layout 4</a>
-                            </div>
+                            <option className="nav-link dropdown-toggle" id="dropdown-1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Composants
+                            </option>
+                            <select type="select" className="dropdown-menu" aria-labelledby="dropdown-1">
+                                <option className="dropdown-item" href="html/docs/layout-1.html">Processeur</option>
+                                <option className="dropdown-item" href="html/docs/layout-2.html">Carte Graphique</option>
+                                <option className="dropdown-item" href="html/docs/layout-3.html">Carte Mère</option>
+                                <option className="dropdown-item" href="html/docs/layout-4.html">RAM</option>
+                            </select>
                             </li>
                             <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle" href="/" id="dropdown-2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -65,7 +65,7 @@ class Header extends Component {
                             <a className="nav-link" href="documentation/index.html">Docs</a>
                             </li>
                             <li className="nav-item">
-                            <a className="nav-link" href="documentation/changelog.html">Changelog</a>
+                            <a className="nav-link" href="documentation/changelog.html">Connexion</a>
                             </li>
                         </ul>
                         </div>

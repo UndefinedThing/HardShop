@@ -3,7 +3,6 @@ import SimpleImageSlider from "react-simple-image-slider";
 
 import Header from "../components/header";
 import Footer from "../components/footer";
-import layout1 from "../assets/images/layout-1.png";
 import layout2 from "../assets/images/layout-2.png";
 import changelog from "../assets/images/changelog.png";
 import layout4 from "../assets/images/layout-4.png";
@@ -12,7 +11,7 @@ import helpcenter from "../assets/images/helpcenter.png";
 class Home extends Component {
     render() {
       const images = [
-        { url: {layout1} },
+        { url: "../assets/images/layout-1.png" },
         { url: {layout2} },
         { url: {changelog} },
         { url: {layout4} },
@@ -32,7 +31,6 @@ class Home extends Component {
       </div>
       <div className="row">
         <div className="col text-center">
-          <a href className="btn btn-green">Purchase Now</a>
         </div>
       </div>
     </div>
@@ -49,7 +47,7 @@ class Home extends Component {
             <div className="card card-showcase lift">
               <SimpleImageSlider
                     width={1370}
-                    height={504}
+                    height={400}
                     images={images}
                 />
             </div>
@@ -209,63 +207,63 @@ class Home extends Component {
         <div className="col-6 col-md-4 col-lg-2">
           <a href="documentation/components/alerts.html" title="Alerts" className="card bordered highlight">
             <div className="card-body text-center px-0 py-1 py-md-2 py-lg-3">
-              <h5 className="fs-18">Alerts</h5>
+              <h5 className="fs-18">Carte Graphiques</h5>
             </div>
           </a>
         </div>
         <div className="col-6 col-md-4 col-lg-2">
           <a href="documentation/components/widgets.html" title="Widgets" className="card bordered highlight">
             <div className="card-body text-center px-0 py-1 py-md-2 py-lg-3">
-              <h5 className="fs-18">Widgets</h5>
+              <h5 className="fs-18">Carte Mère</h5>
             </div>
           </a>
         </div>
         <div className="col-6 col-md-4 col-lg-2">
           <a href="documentation/content/typography.html" title="Typography" className="card bordered highlight">
             <div className="card-body text-center px-0 py-1 py-md-2 py-lg-3">
-              <h5 className="fs-18">Typography</h5>
+              <h5 className="fs-18">RAM</h5>
             </div>
           </a>
         </div>
         <div className="col-6 col-md-4 col-lg-2">
           <a href="documentation/components/video.html" title="Video" className="card bordered highlight">
             <div className="card-body text-center px-0 py-1 py-md-2 py-lg-3">
-              <h5 className="fs-18">Video</h5>
+              <h5 className="fs-18">Refroidissement</h5>
             </div>
           </a>
         </div>
         <div className="col-6 col-md-4 col-lg-2">
           <a href="documentation/components/cards.html" title="Cards" className="card bordered highlight">
             <div className="card-body text-center px-0 py-1 py-md-2 py-lg-3">
-              <h5 className="fs-18">Cards</h5>
+              <h5 className="fs-18">SSD</h5>
             </div>
           </a>
         </div>
         <div className="col-6 col-md-4 col-lg-2">
           <a href="documentation/components/carousels.html" title="Carousels" className="card bordered highlight">
             <div className="card-body text-center px-0 py-1 py-md-2 py-lg-3">
-              <h5 className="fs-18">Carousels</h5>
+              <h5 className="fs-18">Alimentation</h5>
             </div>
           </a>
         </div>
         <div className="col-6 col-md-4 col-lg-2">
           <a href="documentation/components/code.html" title="Code" className="card bordered highlight">
             <div className="card-body text-center px-0 py-1 py-md-2 py-lg-3">
-              <h5 className="fs-18">Code</h5>
+              <h5 className="fs-18">Boîtier</h5>
             </div>
           </a>
         </div>
         <div className="col-6 col-md-4 col-lg-2">
           <a href="documentation/components/forms.html" title="Forms" className="card bordered highlight">
             <div className="card-body text-center px-0 py-1 py-md-2 py-lg-3">
-              <h5 className="fs-18">Forms</h5>
+              <h5 className="fs-18">HDD</h5>
             </div>
           </a>
         </div>
         <div className="col-6 col-md-4 col-lg-2">
           <a href="documentation/components/accordions.html" title="Lists" className="card bordered highlight">
             <div className="card-body text-center px-0 py-1 py-md-2 py-lg-3">
-              <h5 className="fs-18">Lists</h5>
+              <h5 className="fs-18">OS</h5>
             </div>
           </a>
         </div>

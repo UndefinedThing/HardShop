@@ -28,15 +28,6 @@ class Footer extends Component {
                         </div>
                     </div>
                     <div className="col-12 col-md-4 col-lg-2 ml-auto text-md-right">
-                        <div className="dropdown">
-                        <button className="btn btn-inverted btn-block dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            English
-                        </button>
-                        <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a className="dropdown-item" href="/">French</a>
-                            <a className="dropdown-item" href="/">German</a>
-                        </div>
-                        </div>
                     </div>
                     </div>
                 </div>
