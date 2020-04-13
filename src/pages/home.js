@@ -319,12 +319,6 @@ class Home extends Component {
         </div>
       </div>
     );
-    {
-      /* / components */
-    }
-    {
-      /* categories */
-    }
   }
 }
 
