@@ -3,7 +3,6 @@ import SimpleImageSlider from "react-simple-image-slider";
 
 import Header from "../components/header";
 import Footer from "../components/footer";
-import layout2 from "../assets/images/layout-2.png";
 import changelog from "../assets/images/changelog.png";
 import layout4 from "../assets/images/layout-4.png";
 import helpcenter from "../assets/images/helpcenter.png";
@@ -12,7 +11,7 @@ class Home extends Component {
     render() {
       const images = [
         { url: "../assets/images/layout-1.png" },
-        { url: {layout2} },
+        { url: "../assets/images/layout-2.png" },
         { url: {changelog} },
         { url: {layout4} },
         { url: {helpcenter} }
@@ -37,15 +36,12 @@ class Home extends Component {
   </section>
   {/* / hero */}
   <section className="half bg-primary">
-    <div className="half-bg bg-light pb-10">
-      <div className="image image-gradient-vertical" style={{backgroundImage: 'url(../../../assets/images/image.jpg)'}} />
-    </div>
     <div className="container-full mb-5">
       <div className="row gutter-0 justify-content-center">
         <div className="col-12">
           <div className="owl-carousel owl-carousel-showcase owl-carousel-fluid" data-items="[3,2,1]" data-center="true" data-margin={30} data-nav="true" data-loop="true">
             <div className="card card-showcase lift">
-              <SimpleImageSlider
+              <SimpleImageSlider className="card card-showcase lift"
                     width={1370}
                     height={400}
                     images={images}

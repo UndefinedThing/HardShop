@@ -33,6 +33,7 @@ class SSD extends React.Component {
       nom: this.state.nom,
       écriture: this.state.écriture,
     });
+    console.log(ssdRef)
     this.setState({
       capacité: "",
       connectique: "",
