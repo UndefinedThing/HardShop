@@ -9,7 +9,6 @@ import MB from "./components/motherboard";
 import PSU from "./components/Powersupply";
 import CPU from "./components/proco";
 import RAM from "./components/RAM";
-import Search from "./pages/Search";
 import Home from "./pages/home";
 
 const firebase = require("firebase");
@@ -33,8 +32,6 @@ function App() {
   return (
     <div>
       {/* <Header /> */}
-      <Search />
-
       <Router>
         <div>
           <ul>
