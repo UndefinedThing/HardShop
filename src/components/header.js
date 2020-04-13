@@ -3,8 +3,6 @@ import hardware from "../Images site/hardware.jpg";
 
 class Header extends Component {
     render() {
-        // eslint-disable-next-line no-lone-blocks
-        {/* renvoie le header */}
         return(
             <header className="header header-sticky header-transparent">
                 <div className="container">

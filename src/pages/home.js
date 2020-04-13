@@ -318,7 +318,27 @@ class Home extends Component {
           </section>
         </div>
       </div>
+<<<<<<< HEAD
+    </div>
+  </div>
+  
+</div>
+
+                <Footer />
+            </div>
+        )
+=======
     );
+<<<<<<< HEAD
+=======
+    {
+      /* / components */
+    }
+    {
+      /* categories */
+>>>>>>> 62628ade66536d5e3bcf81a693ab746dc9328db1
+    }
+>>>>>>> f858d1f6f2c2759f1587f9252caf8d76719171a5
   }
 }
 
