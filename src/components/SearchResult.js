@@ -3,13 +3,10 @@ import "./SearchResult.css";
 
 const SearchResult = (props) => {
   return (
+    <div>
     <a>
       <div className="resultat">
-        <img
-          className="resultat-poster"
-          style={{ height: "200px" }}
-          src="https://img.icons8.com/carbon-copy/100/000000/no-image.png"
-        />
+        <img className="resultat-poster" style={{ height: "200px" }} src="https://img.icons8.com/carbon-copy/100/000000/no-image.png"/>
         <div className="resultat-infos">
           <div className="resultat-titre">{props.data.nom}</div>
           <div className="resultat-type">{props.data.type}</div>
@@ -17,6 +14,7 @@ const SearchResult = (props) => {
         </div>
       </div>
     </a>
+    </div>
   );
 };
 

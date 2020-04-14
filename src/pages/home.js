@@ -3,19 +3,10 @@ import SimpleImageSlider from "react-simple-image-slider";
 
 import Header from "../components/header";
 import Footer from "../components/footer";
-import changelog from "../assets/images/changelog.png";
-import layout4 from "../assets/images/layout-4.png";
-import helpcenter from "../assets/images/helpcenter.png";
+import { Link } from "react-router-dom";
 
 class Home extends Component {
     render() {
-      const images = [
-        { url: "../assets/images/layout-1.png" },
-        { url: "../assets/images/layout-2.png" },
-        { url: {changelog} },
-        { url: {layout4} },
-        { url: {helpcenter} }
-      ];
         return(
             <div className="wrapper">
                 <Header />
@@ -41,11 +32,7 @@ class Home extends Component {
         <div className="col-12">
           <div className="owl-carousel owl-carousel-showcase owl-carousel-fluid" data-items="[3,2,1]" data-center="true" data-margin={30} data-nav="true" data-loop="true">
             <div className="card card-showcase lift">
-              <SimpleImageSlider className="card card-showcase lift"
-                    width={1370}
-                    height={400}
-                    images={images}
-                />
+              
             </div>
           </div>
         </div>
@@ -273,7 +260,7 @@ class Home extends Component {
         <div className="col-6 col-md-4 col-lg-2">
           <a href="documentation/index.html" title="View All Components" className="card bordered highlight">
             <div className="card-body text-center py-1 py-md-2 py-lg-3 action">
-              <h5 className="fs-18 text-primary">View all</h5>
+              <Link to=""><h5 className="fs-18 text-primary">View all</h5></Link>
             </div>
           </a>
         </div>

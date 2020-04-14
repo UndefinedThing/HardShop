@@ -57,8 +57,8 @@ class HardDrive extends React.Component {
           <div>
             <input
               type="text"
-              name="nom"
-              placeholder="nom"
+              name="RPM"
+              placeholder="RPM"
               value={this.state.RPM}
               onChange={this.updateInput}
             ></input>
@@ -66,8 +66,8 @@ class HardDrive extends React.Component {
           <div>
             <input
               type="text"
-              name="nom"
-              placeholder="nom"
+              name="Capacité"
+              placeholder="Capacité"
               value={this.state.capa}
               onChange={this.updateInput}
             ></input>
@@ -75,8 +75,8 @@ class HardDrive extends React.Component {
           <div>
             <input
               type="text"
-              name="nom"
-              placeholder="nom"
+              name="Format"
+              placeholder="Format"
               value={this.state.format}
               onChange={this.updateInput}
             ></input>
@@ -84,8 +84,8 @@ class HardDrive extends React.Component {
           <div>
             <input
               type="text"
-              name="nom"
-              placeholder="nom"
+              name="Interface"
+              placeholder="Interface"
               value={this.state.interface}
               onChange={this.updateInput}
             ></input>
@@ -93,8 +93,8 @@ class HardDrive extends React.Component {
           <div>
             <input
               type="text"
-              name="nom"
-              placeholder="nom"
+              name="Marque"
+              placeholder="Marque"
               value={this.state.marque}
               onChange={this.updateInput}
             ></input>
@@ -102,8 +102,8 @@ class HardDrive extends React.Component {
           <div>
             <input
               type="text"
-              name="nom"
-              placeholder="nom"
+              name="Mémoire Cache"
+              placeholder="Mémoire Cache"
               value={this.state.mémoire_cache}
               onChange={this.updateInput}
             ></input>
@@ -119,6 +119,9 @@ class HardDrive extends React.Component {
           </div>
           <div>
             <input
+              type="text"
+              name="Transfert"
+              placeholder="Transfert"
               value={this.state.transfert}
               onChange={this.updateInput}
             ></input>
