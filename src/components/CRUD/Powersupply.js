@@ -37,6 +37,7 @@ class PSU extends React.Component {
       nom: "",
       puissance: "",
     });
+    console.log(powersupplyRef);
   };
 
   updateInput = (e) => {

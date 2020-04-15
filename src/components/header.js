@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import hardware from "../Images site/hardware.jpg";
+import hardware from "../Images/hardware.jpg";
 import { Navbar, NavDropdown, Nav } from "react-bootstrap";
 
 class Header extends Component {

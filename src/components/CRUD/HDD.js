@@ -43,6 +43,7 @@ class HardDrive extends React.Component {
       nom: "",
       transfert: "",
     });
+    console.log(harddriveRef);
   };
 
   updateInput = (e) => {

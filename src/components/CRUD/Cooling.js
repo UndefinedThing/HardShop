@@ -40,6 +40,7 @@ class WC extends React.Component {
       socket: "",
       type: "",
     });
+    console.log(wcRef);
   };
 
   updateInput = (e) => {

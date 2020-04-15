@@ -40,6 +40,7 @@ class RAM extends React.Component {
       nom: "",
       quantité: "",
     });
+    console.log(mémoireRef)
   };
 
   updateInput = (e) => {
@@ -52,16 +53,9 @@ class RAM extends React.Component {
       <form onSubmit={this.addRAM}>
         <input
           type="text"
-          name="nom"
-          placeholder="nom"
+          name="capacité"
+          placeholder="capacité"
           value={this.state.capacité}
-          onChange={this.updateInput}
-        ></input>
-        <input
-          type="text"
-          name="nom"
-          placeholder="nom"
-          value={this.state.fréquence}
           onChange={this.updateInput}
         ></input>
         <input
@@ -71,6 +65,13 @@ class RAM extends React.Component {
           onChange={this.updateInput}
           value={this.state.fréquence}
         />
+        <input
+          type="text"
+          name="nom"
+          placeholder="nom"
+          onChange={this.updateInput}
+          value={this.state.nom}
+        ></input>
         <input
           type="text"
           name="interface"
@@ -91,13 +92,6 @@ class RAM extends React.Component {
           placeholder="marque"
           onChange={this.updateInput}
           value={this.state.marque}
-        />
-        <input
-          type="text"
-          name="nom"
-          placeholder="nom"
-          onChange={this.updateInput}
-          value={this.state.nom}
         />
         <input
           type="text"

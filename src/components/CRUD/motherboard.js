@@ -40,6 +40,7 @@ class MB extends React.Component {
       proco_compatible: "",
       socket: "",
     });
+    console.log(mbRef);
   };
 
   updateInput = (e) => {
