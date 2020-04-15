@@ -47,7 +47,7 @@ function App() {
 
             <Switch>
               <Route exact path="/">
-                {/* <Home /> */}
+                <Home />
               </Route>
               <Route path="/CRUDs">
                 <Crud />
