@@ -4,15 +4,17 @@ import "react-animated-slider/build/horizontal.css";
 import "./slider-animations.css";
 import "./styles.css";
 
+
+
 const content = [
   {
-    title: "Vulputate Mollis Ultricies Fermentum Parturient",
+    title: "Prochainement, les nouvelles RTX 3XXX de chez NVidia",
     description:
-      "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras justo odio, dapibus ac facilisis.",
-    button: "Read More",
-    image: "https://i.imgur.com/ZXBtVw7.jpg",
-    user: "Luan Gjokaj",
-    userProfile: "https://i.imgur.com/JSW6mEk.png",
+      "Ca y est ! Quelques fuites de la part d'NVidia nous ont révélées que celles-ci seront présentées cet Eté 2020. Mais rien n'est encore sur vu le contexte actuel",
+    button: "Lire plus",
+    image: "https://imgur.com/VkmKzQz.jpg",
+    user: "L'équipe HardShop",
+    userProfile: "https://imgur.com/u7h24fM.jpg",
   },
   {
     title: "Tortor Dapibus Commodo Aenean Quam",
@@ -20,8 +22,8 @@ const content = [
       "Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui.",
     button: "Discover",
     image: "https://i.imgur.com/DCdBXcq.jpg",
-    user: "Erich Behrens",
-    userProfile: "https://i.imgur.com/0Clfnu7.png",
+    user: "L'équipe HardShop",
+    userProfile: "https://imgur.com/u7h24fM.jpg",
   },
   {
     title: "Phasellus volutpat metus",
@@ -30,7 +32,7 @@ const content = [
     button: "Buy now",
     image: "https://i.imgur.com/DvmN8Hx.jpg",
     user: "Bruno Vizovskyy",
-    userProfile: "https://i.imgur.com/4KeKvtH.png",
+    userProfile: "https://imgur.com/u7h24fM.jpg",
   },
 ];
 
@@ -38,7 +40,7 @@ class Slid extends Component {
   render() {
     return (
       <div>
-        <Slider className="slider-wrapper">
+        <Slider className="slider-wrapper" autoplay={3000}>
           {content.map((item, index) => (
             <div
               key={index}

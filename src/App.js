@@ -33,20 +33,8 @@ if (firebase.apps.length === 0) {
 
 function App() {
   return (
-    <div>
-      <div>
+    <div>      
         <Router>
-          <div>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="CRUDs">CRUD's</Link>
-              </li>
-            </ul>
-            <hr />
-
             <Switch>
               <Route exact path="/">
                 <Home />
@@ -54,10 +42,11 @@ function App() {
               <Route path="/CRUDs">
                 <Crud />
               </Route>
+              <Route path="/boutique">
+                <Crud />
+              </Route>
             </Switch>
-          </div>
         </Router>
-      </div>
     </div>
   );
 }

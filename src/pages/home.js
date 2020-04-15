@@ -17,12 +17,10 @@ class Home extends Component {
     <div className="container">
       <div className="row justify-content-center">
         <div className="col-lg-10 text-white text-center">
-          <h1 className="font-weight-light">Very Powerful <b>Documentation</b> and Help Center Bootstrap Template.</h1>
+          <h1 className="font-weight-light"><b>Ici se trouve tout ce dont vous avez besoin.</b> Les composants, les configs et les News en lien avec le Hardware.</h1>
         </div>
       </div>
       <div className="row">
-        <div className="col text-center">
-        </div>
       </div>
     </div>
   </section>
@@ -40,11 +38,11 @@ class Home extends Component {
   </section>
   {/* components */}
   
-  <section className="pt-0">
+  <section className="pt-2">
     <div className="container">
       <div className="row justify-content-center">
         <div className="col-md-6 text-center">
-          <h2><b>Highlight</b> what's important.</h2>
+          <h2><b>Tout ce qu'il faut retenir !</b></h2>
           <p>We offer high ammount of different components to showcase your content in the best way possible.</p>
         </div>
       </div>
@@ -175,8 +173,9 @@ class Home extends Component {
     <div className="container">
       <div className="row justify-content-center">
         <div className="col-md-6 text-center">
-          <h2>What's <b>in the box</b> ?</h2>
-          <p>Everything you might need to build a super intuitive &amp; readable documentation. Missing something ? <a href="mailto:support@webuildthemes.com" className="action text-dark">Request</a></p>
+          <h2>Tout <b>est ici</b> !</h2>
+          <p>Il manque quelque chose ? Faites-le nous savoir ! 
+            <a href="mailto:support@webuildthemes.com" className="action text-dark">Request</a></p>
         </div>
       </div>
       <div className="row gutter-1">
@@ -251,16 +250,9 @@ class Home extends Component {
           </a>
         </div>
         <div className="col-6 col-md-4 col-lg-2">
-          <a href="documentation/components/steps.html" title="Steps" className="card bordered highlight">
-            <div className="card-body text-center px-0 py-1 py-md-2 py-lg-3">
-              <h5 className="fs-18">Steps</h5>
-            </div>
-          </a>
-        </div>
-        <div className="col-6 col-md-4 col-lg-2">
           <a href="documentation/index.html" title="View All Components" className="card bordered highlight">
             <div className="card-body text-center py-1 py-md-2 py-lg-3 action">
-              <Link to=""><h5 className="fs-18 text-primary">View all</h5></Link>
+              <Link to=""><h5 className="fs-18 text-primary">voir plus</h5></Link>
             </div>
           </a>
         </div>
