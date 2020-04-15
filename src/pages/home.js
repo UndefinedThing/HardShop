@@ -1,14 +1,15 @@
 import React, { Component } from "react";
-import SimpleImageSlider from "react-simple-image-slider";
 
 import Header from "../components/header";
 import Footer from "../components/footer";
 import { Link } from "react-router-dom";
 
+import Slid from "../components/Slider/index";
+
 class Home extends Component {
     render() {
         return(
-            <div className="wrapper">
+            <div>
                 <Header />
              <div>
   {/* hero */}
@@ -27,19 +28,18 @@ class Home extends Component {
   </section>
   {/* / hero */}
   <section className="half bg-primary">
-    <div className="container-full mb-5">
+   <div className="container-full mb-5">
       <div className="row gutter-0 justify-content-center">
         <div className="col-12">
-          <div className="owl-carousel owl-carousel-showcase owl-carousel-fluid" data-items="[3,2,1]" data-center="true" data-margin={30} data-nav="true" data-loop="true">
-            <div className="card card-showcase lift">
-              
-            </div>
+          <div className="owl-carousel owl-carousel-showcase owl-carousel-fluid" data-items="[3,2,1]" data-center="true" data-margin={30} data-nav="true" data-loop="true">            
+              <Slid/>            
           </div>
         </div>
       </div>
     </div>
   </section>
   {/* components */}
+  
   <section className="pt-0">
     <div className="container">
       <div className="row justify-content-center">

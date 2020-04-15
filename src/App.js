@@ -1,5 +1,7 @@
 import React from "react";
-import "./assets/css/style.css";
+import "./App.css"
+
+
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Case from "./components/CRUD/Case";
