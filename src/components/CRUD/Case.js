@@ -1,7 +1,7 @@
-import React from "./node_modules/react";
+import React from "../../../node_modules/react";
 
-const firebase = require("./node_modules/firebase");
-require("./node_modules/firebase/firestore");
+const firebase = require("../../../node_modules/firebase");
+require("../../../node_modules/firebase/firestore");
 
 class Boitier extends React.Component {
   constructor() {
