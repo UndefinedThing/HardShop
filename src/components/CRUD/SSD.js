@@ -1,75 +1,79 @@
-import React from "react";
+import React from "./node_modules/react";
 
-const firebase = require("firebase");
-require("firebase/firestore");
+const firebase = require("./node_modules/firebase");
+require("./node_modules/firebase/firestore");
 
-class RAM extends React.Component {
+class SSD extends React.Component {
   constructor() {
     super();
     this.state = {
       capacité: "",
-      fréquence: "",
+      connectique: "",
+      format: "",
       interface: "",
-      latence: "",
+      lecture: "",
       marque: "",
       nom: "",
-      quantité: "",
+      écriture: "",
     };
   }
-  addRAM = (e) => {
+  addSSD = (e) => {
     e.preventDefault();
     const db = firebase.firestore();
-    db.settiengs({
+    db.settings({
       timestampsInSnapshots: true,
     });
-    const mémoireRef = db.collection("RAM").add({
+    const ssdRef = db.collection("SSD's").add({
       capacité: this.state.capacité,
-      fréquence: this.state.fréquence,
+      connectique: this.state.connectique,
+      format: this.state.format,
       interface: this.state.interface,
-      latence: this.state.latence,
+      lecture: this.state.lecture,
       marque: this.state.marque,
       nom: this.state.nom,
-      quantité: this.state.quantité,
+      écriture: this.state.écriture,
     });
+    console.log(ssdRef);
     this.setState({
       capacité: "",
-      fréquence: "",
+      connectique: "",
+      format: "",
       interface: "",
-      latence: "",
+      lecture: "",
       marque: "",
       nom: "",
-      quantité: "",
+      écriture: "",
     });
   };
 
   updateInput = (e) => {
     this.setState({
-      [e.traget.name]: e.target.value,
+      [e.target.name]: e.target.value,
     });
   };
   render() {
     return (
-      <form onSubmit={this.addRAM}>
+      <form onSubmit={this.addSSD}>
         <input
           type="text"
-          name="nom"
-          placeholder="nom"
+          name="capacité"
+          placeholder="capacité"
+          onChange={this.updateInput}
           value={this.state.capacité}
-          onChange={this.updateInput}
-        ></input>
+        />
         <input
           type="text"
-          name="nom"
-          placeholder="nom"
-          value={this.state.fréquence}
+          name="connectique"
+          placeholder="connectique"
           onChange={this.updateInput}
-        ></input>
+          value={this.state.connectique}
+        />
         <input
           type="text"
-          name="fréquence"
-          placeholder="fréquence"
+          name="format"
+          placeholder="format"
           onChange={this.updateInput}
-          value={this.state.fréquence}
+          value={this.state.format}
         />
         <input
           type="text"
@@ -80,10 +84,10 @@ class RAM extends React.Component {
         />
         <input
           type="text"
-          name="latence"
-          placeholder="latence"
+          name="lecture"
+          placeholder="lecture"
           onChange={this.updateInput}
-          value={this.state.latence}
+          value={this.state.lecture}
         />
         <input
           type="text"
@@ -101,10 +105,10 @@ class RAM extends React.Component {
         />
         <input
           type="text"
-          name="quantité"
-          placeholder="quantité"
+          name="écriture"
+          placeholder="écriture"
           onChange={this.updateInput}
-          value={this.state.quantité}
+          value={this.state.écriture}
         />
         <button type="submit">Submit</button>
       </form>
@@ -112,4 +116,4 @@ class RAM extends React.Component {
   }
 }
 
-export default RAM;
+export default SSD;

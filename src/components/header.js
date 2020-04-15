@@ -69,10 +69,70 @@ class Header extends Component {
                         </div>
                     </nav>
                     </div>
-                </div>
-            </header>
-        )
-    }
+                  </li>
+                  <li className="nav-item dropdown">
+                    <a
+                      className="nav-link dropdown-toggle"
+                      href="/"
+                      id="dropdown-3"
+                      role="button"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      Pages
+                    </a>
+                    <div className="dropdown-menu" aria-labelledby="dropdown-3">
+                      <a
+                        className="dropdown-item"
+                        href="html/pages/contact.html"
+                      >
+                        Contact
+                      </a>
+                      <a
+                        className="dropdown-item"
+                        href="html/pages/changelog.html"
+                      >
+                        Changelog
+                      </a>
+                      <a className="dropdown-item" href="html/pages/faq.html">
+                        FAQ
+                      </a>
+                      <a
+                        className="dropdown-item"
+                        href="html/pages/pricing.html"
+                      >
+                        Pricing
+                      </a>
+                      <a className="dropdown-item" href="html/pages/terms.html">
+                        Terms
+                      </a>
+                      <div className="dropdown-divider" />
+                      <a className="dropdown-item" href="html/pages/404.html">
+                        404
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+                <ul className="navbar-nav">
+                  <li className="nav-item">
+                    <a className="nav-link" href="documentation/index.html">
+                      Docs
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link" href="documentation/changelog.html">
+                      Connexion
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+    );
+  }
 }
 
 export default Header;
