@@ -9,7 +9,7 @@ class Header extends Component {
               
               
               <Navbar collapseOnSelect bg="dark" expand="lg" variant="dark">
-                <a href className="navbar-brand">
+                <a href="/" className="navbar-brand">
                   <img src={hardware} alt="Logo" />
                 </a>
                 <Navbar.Brand href="/">HardShop</Navbar.Brand>

@@ -71,29 +71,28 @@ class CPU extends React.Component {
           placeholder="architecture"
           value={this.state.architecture}
           onChange={this.updateInput}
-        ></input>
+        />
         <input
           type="text"
           name="cache"
           placeholder="cache"
           value={this.state.cache}
           onChange={this.updateInput}
-        ></input>
-        <input></input>
+        />
         <input
           type="text"
           name="chipset graphique"
           placeholder="chipset graphique"
           value={this.state["chipset graphique"]}
           onChange={this.updateInput}
-        ></input>
+        />
         <input
           type="text"
           name="fréquence"
           placeholder="fréquence"
           value={this.state.fréquence}
           onChange={this.updateInput}
-        ></input>
+        />
 
         <input
           type="text"
@@ -101,35 +100,35 @@ class CPU extends React.Component {
           placeholder="fréquence boost"
           value={this.state.fréquence_boost}
           onChange={this.updateInput}
-        ></input>
+        />
         <input
           type="text"
           name="Nombre coeur"
           placeholder="Nombre coeur"
           value={this.state.nb_coeur}
           onChange={this.updateInput}
-        ></input>
+        />
         <input
           type="text"
           name="Nombre Threads"
           placeholder="Nombre Threads"
           value={this.state.nb_threads}
           onChange={this.updateInput}
-        ></input>
+        />
         <input
           type="text"
           name="overclocking"
           placeholder="overclocking"
           value={this.state.overclocking}
           onChange={this.updateInput}
-        ></input>
+        />
         <input
           type="text"
           name="socket"
           placeholder="socket"
           value={this.state.socket}
           onChange={this.updateInput}
-        ></input>
+        />
         <input
           type="text"
           name="nom"
@@ -143,7 +142,7 @@ class CPU extends React.Component {
           placeholder="type"
           value={this.state.type}
           onChange={this.updateInput}
-        ></input>
+        />
         <button type="submit">Submit</button>
       </form>
     );

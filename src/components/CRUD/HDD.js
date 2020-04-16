@@ -62,7 +62,7 @@ class HardDrive extends React.Component {
               placeholder="RPM"
               value={this.state.RPM}
               onChange={this.updateInput}
-            ></input>
+            />
           </div>
           <div>
             <input
@@ -71,7 +71,7 @@ class HardDrive extends React.Component {
               placeholder="Capacité"
               value={this.state.capa}
               onChange={this.updateInput}
-            ></input>
+            />
           </div>
           <div>
             <input
@@ -80,7 +80,7 @@ class HardDrive extends React.Component {
               placeholder="Format"
               value={this.state.format}
               onChange={this.updateInput}
-            ></input>
+            />
           </div>
           <div>
             <input
@@ -89,7 +89,7 @@ class HardDrive extends React.Component {
               placeholder="Interface"
               value={this.state.interface}
               onChange={this.updateInput}
-            ></input>
+            />
           </div>
           <div>
             <input
@@ -98,7 +98,7 @@ class HardDrive extends React.Component {
               placeholder="Marque"
               value={this.state.marque}
               onChange={this.updateInput}
-            ></input>
+            />
           </div>
           <div>
             <input
@@ -107,7 +107,7 @@ class HardDrive extends React.Component {
               placeholder="Mémoire Cache"
               value={this.state.mémoire_cache}
               onChange={this.updateInput}
-            ></input>
+            />
           </div>
           <div>
             <input
@@ -125,7 +125,7 @@ class HardDrive extends React.Component {
               placeholder="Transfert"
               value={this.state.transfert}
               onChange={this.updateInput}
-            ></input>
+            />
           </div>
           <button type="submit">Submit</button>
         </form>

@@ -57,7 +57,7 @@ class Boitier extends React.Component {
               placeholder="nom"
               onChange={this.updateInput}
               value={this.state.nom}
-            ></input>
+            />
           </div>
           <div>
             <input
@@ -66,7 +66,7 @@ class Boitier extends React.Component {
               placeholder="format"
               onChange={this.updateInput}
               value={this.state.format}
-            ></input>
+            />
           </div>
           <div>
             <input
@@ -75,7 +75,7 @@ class Boitier extends React.Component {
               placeholder="couleur"
               onChange={this.updateInput}
               value={this.state.couleur}
-            ></input>
+            />
           </div>
           <div>
             <input
@@ -84,7 +84,7 @@ class Boitier extends React.Component {
               placeholder="alimentation inclus"
               onChange={this.updateInput}
               value={this.state["alim inclus"]}
-            ></input>
+            />
           </div>
           <div>
             <input
@@ -93,7 +93,7 @@ class Boitier extends React.Component {
               placeholder="ventilateur"
               onChange={this.updateInput}
               value={this.state.ventilateur}
-            ></input>
+            />
           </div>
           <div>
             <input
@@ -111,7 +111,7 @@ class Boitier extends React.Component {
               placeholder="RGB"
               onChange={this.updateInput}
               value={this.state.RGB}
-            ></input>
+            />
           </div>
           <button type="submit">Submit</button>
         </form>

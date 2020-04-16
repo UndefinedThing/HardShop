@@ -57,7 +57,7 @@ class RAM extends React.Component {
           placeholder="capacité"
           value={this.state.capacité}
           onChange={this.updateInput}
-        ></input>
+        />
         <input
           type="text"
           name="fréquence"
@@ -71,7 +71,7 @@ class RAM extends React.Component {
           placeholder="nom"
           onChange={this.updateInput}
           value={this.state.nom}
-        ></input>
+        />
         <input
           type="text"
           name="interface"
