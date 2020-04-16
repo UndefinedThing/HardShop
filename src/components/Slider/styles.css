@@ -113,7 +113,7 @@ button:hover {
 		top: 50%;
 		transform: translateY(-50%);
 		z-index: 10;
-		background: url('../../Images/directionretrorightstrokearrowicon-1320185744769287290_0.svg') no-repeat center center / 24px;
+		background: url('../../Images/right-arrow.svg') no-repeat center center / 24px;
 		width: 32px;
 		height: 32px;
 		text-indent: -9999px;
@@ -121,7 +121,7 @@ button:hover {
 }
 
 .previousButton:hover, .nextButton:hover {
-  background: url('../../Images/directionretrorightstrokearrowicon-1320185744769287290_0.svg') no-repeat center center / 24px;
+  background: url('../../Images/right-arrow.svg') no-repeat center center / 24px;
 }
 
 .previousButton {

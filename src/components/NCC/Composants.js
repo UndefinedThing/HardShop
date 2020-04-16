@@ -1,7 +1,5 @@
 import React, { Card, Button, CardDeck } from "react";
 
-import rtx from "../../Images/rtxampere.jpg"
-
 class Cards extends React.Component {
     render() {
         return(
