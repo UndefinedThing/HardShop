@@ -43,7 +43,7 @@ class Home extends Component {
       <div className="row justify-content-center">
         <div className="col-md-6 text-center">
           <h2><b>Tout ce qu'il faut retenir !</b></h2>
-          <p>We offer high ammount of different components to showcase your content in the best way possible.</p>
+          <p></p>
         </div>
       </div>
       <div className="row gutter-3 align-items-center">

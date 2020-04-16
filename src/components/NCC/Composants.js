@@ -1,110 +1,76 @@
-import React, { Card, Button, CardDeck } from "react";
+import React from "react";
+import { Card , CardDeck, Button } from "react-bootstrap";
+import Header from "../header";
+
+const firebase = require("firebase");
+require("firebase/firestore");
 
 class Cards extends React.Component {
+    constructor() {
+        super();
+        this.ref = firebase.firestore().collection("CPU's");
+        this.unsubscribe = null;
+        this.state = {
+            Proco: []
+    };
+    }
+    
+    onCollectionUpdate = (querySnapshot) => {
+        const Proco = [];
+        querySnapshot.forEach((doc) => {
+          const { architecture, cache, chipset, chipset_graphique, fréquence, fréquence_boost, nb_coeur, nb_threads, nom, overclocking, socket, type, img } = doc.data();
+            Proco.push({
+                key: doc.id,
+                doc,
+                nom,
+                nb_coeur,
+                nb_threads,
+                fréquence,
+                fréquence_boost,
+                cache,
+                architecture,
+                chipset,
+                chipset_graphique,
+                socket,
+                overclocking,
+                type,
+                img
+
+            });
+        });
+        this.setState({
+          Proco
+       });
+    }
+        
+    componentDidMount() {
+        this.unsubscribe = this.ref.onSnapshot(this.onCollectionUpdate);
+    }
+    
     render() {
         return(
             <div>
-                <CardDeck>
-                    <Card style={{ width: '12rem' }}>
-                        <Card.Img variant="top" />
+            <Header />
+            <CardDeck>
+                
+                {this.state.Proco.map(Proco =>
+                    <div className="pt-5 pl-5">
+                        <Card style={{ width: '12rem' }}>
+                        <Card.Img variant="top" src={Proco.img} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title><h4>Nom : {Proco.nom}</h4></Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
+                                {Proco.nb_coeur} Coeurs ({Proco.nb_threads} threads)
+                                Fréquence : {Proco.fréquence}  ({Proco.fréquence_boost} en Boost)
                             </Card.Text>
-                            <Button variant="primary">voir plus</Button>
-                        </Card.Body>
-                    </Card>
-                    <Card style={{ width: '12rem' }}>
-                        <Card.Img variant="top" src="" />
-                        <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
-                            <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
-                            </Card.Text>
+                            
                             <Button variant="primary">Go somewhere</Button>
                         </Card.Body>
                     </Card>
-                    <Card style={{ width: '12rem' }}>
-                        <Card.Img variant="top" src="" />
-                        <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
-                            <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
-                            </Card.Text>
-                            <Button variant="primary">voir plus</Button>
-                        </Card.Body>
-                    </Card>
-                    <Card style={{ width: '12rem' }}>
-                        <Card.Img variant="top" src="" />
-                        <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
-                            <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
-                            </Card.Text>
-                            <Button variant="primary">voir plus</Button>
-                        </Card.Body>
-                    </Card>
-                    <Card style={{ width: '12rem' }}>
-                        <Card.Img variant="top" src="" />
-                        <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
-                            <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
-                            </Card.Text>
-                            <Button variant="primary">voir plus</Button>
-                        </Card.Body>
-                    </Card>
-                    <Card style={{ width: '12rem' }}>
-                        <Card.Img variant="top" src="" />
-                        <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
-                            <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
-                            </Card.Text>
-                            <Button variant="primary">voir plus</Button>
-                        </Card.Body>
-                    </Card>
-                    <Card style={{ width: '12rem' }}>
-                        <Card.Img variant="top" src="" />
-                        <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
-                            <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
-                            </Card.Text>
-                            <Button variant="primary">voir plus</Button>
-                        </Card.Body>
-                    </Card>
-                    <Card style={{ width: '12rem' }}>
-                        <Card.Img variant="top" src="" />
-                        <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
-                            <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
-                            </Card.Text>
-                            <Button variant="primary">voir plus</Button>
-                        </Card.Body>
-                    </Card>
-                    <Card style={{ width: '12rem' }}>
-                        <Card.Img variant="top" src="" />
-                        <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
-                            <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
-                            </Card.Text>
-                            <Button variant="primary">voir plus</Button>
-                        </Card.Body>
-                    </Card>
-                </CardDeck>
+                    </div>
+                )}
+                
+            </CardDeck>
             </div>
         )
     }

@@ -5,7 +5,7 @@ import { Navbar, NavDropdown, Nav } from "react-bootstrap";
 class Header extends Component {
   render() {
     return (
-      <header className="header header-sticky header-transparent">
+      <header>
         <Navbar collapseOnSelect bg="dark" expand="lg" variant="dark">
           <a href="/" className="navbar-brand">
             <img src={hardware} alt="Logo" />
@@ -15,8 +15,8 @@ class Header extends Component {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
               <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="">News</Nav.Link>
-              <Nav.Link href="">Configuration</Nav.Link>
+              <Nav.Link href="/News">News</Nav.Link>
+              <Nav.Link href="/Configuration">Configuration</Nav.Link>
               <NavDropdown title="Composants" id="collasible-nav-dropdown">
                 <NavDropdown.Item href="">Processeur</NavDropdown.Item>
                 <NavDropdown.Item href="">Carte Mère</NavDropdown.Item>
@@ -32,6 +32,10 @@ class Header extends Component {
               <NavDropdown title="Paramètres" id="collasible-nav-dropdown">
                 <NavDropdown.Item href="/CRUDs">Config</NavDropdown.Item>
                 <NavDropdown.Item href="/boutique">Boutique</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="/Card">
+                  Cards
+                </NavDropdown.Item>
               </NavDropdown>
             </Nav>
             <Nav>
