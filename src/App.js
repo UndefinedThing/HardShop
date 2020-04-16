@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-
+import "firebase/firestore";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 
@@ -35,8 +35,7 @@ function App() {
               <Route path="/CRUDs">
                 <CRUD />
               </Route>
-              <Route path="/boutique">
-                
+              <Route path="/Cards">
               </Route>
             </Switch>
         </Router>

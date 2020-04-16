@@ -17,11 +17,11 @@ const content = [
     userProfile: "https://imgur.com/u7h24fM.jpg",
   },
   {
-    title: "Tortor Dapibus Commodo Aenean Quam",
+    title: "Une nouvelle référence est là ! Asus ROG NVidia RTX 2080 Ti Strix ",
     description:
-      "Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui.",
+      "Un monstre de puissance à la portée de tous. Sans son prix allucinant la vitrine de chez Asus nous délivre une puissance incomparable.",
     button: "Discover",
-    image: "https://i.imgur.com/DCdBXcq.jpg",
+    image: "https://imgur.com/2Z3HPtl.jpg",
     user: "L'équipe HardShop",
     userProfile: "https://imgur.com/u7h24fM.jpg",
   },
@@ -31,7 +31,7 @@ const content = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula.",
     button: "Buy now",
     image: "https://i.imgur.com/DvmN8Hx.jpg",
-    user: "Bruno Vizovskyy",
+    user: "L'équipe HardShop",
     userProfile: "https://imgur.com/u7h24fM.jpg",
   },
 ];
@@ -57,7 +57,7 @@ class Slid extends Component {
               <section>
                 <img src={item.userProfile} alt={item.user} />
                 <span>
-                  Posted by <strong>{item.user}</strong>
+                  Posté par <strong>{item.user}</strong>
                 </span>
               </section>
             </div>
