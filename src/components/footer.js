@@ -14,9 +14,9 @@ class Footer extends Component {
                         <div className="row">
                         <div className="col">
                             <ul className="list-group list-group-minimal">
-                            <li className="list-group-item"><a href="/" className="link">Product Help</a></li>
-                            <li className="list-group-item"><a href="/" className="link">Training Videos</a></li>
-                            <li className="list-group-item"><a href="/" className="link">Integrations</a></li>
+                            <li className="list-group-item"><a href="https://www.facebook.com/geeke.tonerd.9" className="link">FaceBook</a></li>
+                            <li className="list-group-item"><a href="https://www.instagram.com/geek2_nerd/?hl=fr" className="link">Instagram</a></li>
+                            <li className="list-group-item"><a href="https://twitter.com/Geek2Nerd1" className="link">Twitter</a></li>
                             </ul>
                         </div>
                         <div className="col">

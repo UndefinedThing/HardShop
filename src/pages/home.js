@@ -82,70 +82,70 @@ class Home extends Component {
         <div className="col-6 col-md-4 col-lg-2">
           <a href="documentation/components/accordions.html" title="Accordions" className="card bordered highlight">
             <div className="card-body text-center px-0 py-1 py-md-2 py-lg-3">
-              <h5 className="fs-18">Processeur</h5>
+              <Link to=""><h5 className="fs-18">Processeur</h5></Link>
             </div>
           </a>
         </div>
         <div className="col-6 col-md-4 col-lg-2">
           <a href="documentation/components/alerts.html" title="Alerts" className="card bordered highlight">
             <div className="card-body text-center px-0 py-1 py-md-2 py-lg-3">
-              <h5 className="fs-18">Carte Graphiques</h5>
+              <Link to=""><h5 className="fs-18">Carte Graphiques</h5></Link>
             </div>
           </a>
         </div>
         <div className="col-6 col-md-4 col-lg-2">
           <a href="documentation/components/widgets.html" title="Widgets" className="card bordered highlight">
             <div className="card-body text-center px-0 py-1 py-md-2 py-lg-3">
-              <h5 className="fs-18">Carte Mère</h5>
+              <Link><h5 className="fs-18">Carte Mère</h5></Link>
             </div>
           </a>
         </div>
         <div className="col-6 col-md-4 col-lg-2">
           <a href="documentation/content/typography.html" title="Typography" className="card bordered highlight">
             <div className="card-body text-center px-0 py-1 py-md-2 py-lg-3">
-              <h5 className="fs-18">RAM</h5>
+              <Link><h5 className="fs-18">RAM</h5></Link>
             </div>
           </a>
         </div>
         <div className="col-6 col-md-4 col-lg-2">
           <a href="documentation/components/video.html" title="Video" className="card bordered highlight">
             <div className="card-body text-center px-0 py-1 py-md-2 py-lg-3">
-              <h5 className="fs-18">Refroidissement</h5>
+              <Link><h5 className="fs-18">Refroidissement</h5></Link>
             </div>
           </a>
         </div>
         <div className="col-6 col-md-4 col-lg-2">
           <a href="documentation/components/cards.html" title="SSD" className="card bordered highlight">
             <div className="card-body text-center px-0 py-1 py-md-2 py-lg-3">
-              <h5 className="fs-18">SSD</h5>
+              <Link><h5 className="fs-18">SSD</h5></Link>
             </div>
           </a>
         </div>
         <div className="col-6 col-md-4 col-lg-2">
           <a href="documentation/components/carousels.html" title="Alimentation" className="card bordered highlight">
             <div className="card-body text-center px-0 py-1 py-md-2 py-lg-3">
-              <h5 className="fs-18">Alimentation</h5>
+              <Link><h5 className="fs-18">Alimentation</h5></Link>
             </div>
           </a>
         </div>
         <div className="col-6 col-md-4 col-lg-2">
           <a href="documentation/components/code.html" title="Code" className="card bordered highlight">
             <div className="card-body text-center px-0 py-1 py-md-2 py-lg-3">
-              <h5 className="fs-18">Boîtier</h5>
+              <Link><h5 className="fs-18">Boîtier</h5></Link>
             </div>
           </a>
         </div>
         <div className="col-6 col-md-4 col-lg-2">
           <a href="documentation/components/forms.html" title="Forms" className="card bordered highlight">
             <div className="card-body text-center px-0 py-1 py-md-2 py-lg-3">
-              <h5 className="fs-18">HDD</h5>
+              <Link><h5 className="fs-18">HDD</h5></Link>
             </div>
           </a>
         </div>
         <div className="col-6 col-md-4 col-lg-2">
           <a href="documentation/components/accordions.html" title="Lists" className="card bordered highlight">
             <div className="card-body text-center px-0 py-1 py-md-2 py-lg-3">
-              <h5 className="fs-18">OS</h5>
+              <Link><h5 className="fs-18">OS</h5></Link>
             </div>
           </a>
         </div>
