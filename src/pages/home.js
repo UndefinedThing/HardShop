@@ -50,117 +50,17 @@ class Home extends Component {
         <div className="col-lg-5">
           <div className="row justify-content-center justify-content-lg-end">
             <div className="col-8">
-              <ul className="list-group list-group-minimal">
-                <li className="list-group-item d-flex align-items-center">
-                  <div>
-                    <i className="fs-24 icon-check2 bg-blue text-white icon-boxed mr-2" />
-                  </div>
-                  Advanced Layout
-                </li>
-                <li className="list-group-item d-flex align-items-center">
-                  <div>
-                    <i className="fs-24 icon-check2 bg-blue text-white icon-boxed mr-2" />
-                  </div>
-                  Exclusive Design
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="row mt-3 d-none d-lg-block">
-            <div className="col">
-              <div className="boxed p-3">
-                <ul className="file-tree">
-                  <li className="file-tree-folder empty">Images
-                    <span>description</span>
-                  </li>
-                  <li className="file-tree-folder">CSS
-                    <span>description</span>
-                    <ul>
-                      <li>file name <span>description</span></li>
-                      <li>file name <span>description</span></li>
-                    </ul>
-                  </li>
-                  <li className="file-tree-folder">HTML
-                    <span>description</span>
-                    <ul>
-                      <li className="file-tree-folder">PAGES
-                        <span>description</span>
-                        <ul>
-                          <li>file name <span>description</span></li>
-                          <li>file name <span>description</span></li>
-                          <li>file name <span>description</span></li>
-                        </ul>
-                      </li>
-                      <li>file name <span>description</span></li>
-                      <li>file name <span>description</span></li>
-                    </ul>
-                  </li>
-                  <li>index.html <span>description</span></li>
-                  <li>components.html <span>description</span></li>
-                </ul>
-              </div>
             </div>
           </div>
         </div>
         <div className="col-lg-7">
-          <div className="row justify-content-center justify-content-lg-start">
-            <div className="col-6 col-md-4">
-              <div className="type boxed">
-                <div>
-                  <span className="badge badge-green">New</span>
-                  <h5 className="type-title">Open Sans</h5>
-                  <div className="type-example">
-                    <span>Ab</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-6 col-md-4">
-              <div className="type bordered">
-                <div>
-                  <h5 className="type-title">Open Sans Bold</h5>
-                  <div className="type-example">
-                    <span className="font-weight-bold">Ab</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
           <div className="row mt-3">
             <div className="col">
-              <div className="card">
-                <div className="card-header no-border bg-white pb-0">
-                  <ul className="nav nav-pills card-header-pills lavalamp" id="myTab" role="tablist">
-                    <li className="nav-item">
-                      <a className="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">HTML</a>
-                    </li>
-                    <li className="nav-item">
-                      <a className="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">CSS</a>
-                    </li>
-                  </ul>
-                </div>
-                <div className="card-body">
-                  <div className="tab-content" id="myTabContent">
-                    <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                      <pre><code className="language-markup">&lt;div class="image image-overlay"&gt;&lt;/div&gt;</code></pre>
-                    </div>
-                    <div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                      <pre><code className="language-css">body {"{"}{"\n"}{"  "}&gt; section,{"\n"}{"  "}&gt; footer {"{"}{"\n"}{"    "}position: relative;{"\n"}{"    "}margin: 0 auto;{"\n"}{"    "}padding: 6.25rem 0;{"\n"}{"    "}overflow: hidden;{"\n"}{"  "}{"}"}{"\n"}{"}"}</code></pre>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              
             </div>
           </div>
           <div className="row mt-3 justify-content-center justify-content-lg-start">
             <div className="col-md-6">
-              <div className="color bordered">
-                <span className="color-example bg-blue" />
-                <div className="color-info">
-                  <h5 className="color-title">Active Blue</h5>
-                  <span>#064CDB</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -252,7 +152,7 @@ class Home extends Component {
         <div className="col-6 col-md-4 col-lg-2">
           <a href="documentation/index.html" title="View All Components" className="card bordered highlight">
             <div className="card-body text-center py-1 py-md-2 py-lg-3 action">
-              <Link to=""><h5 className="fs-18 text-primary">voir plus</h5></Link>
+              <Link to="/"><h5 className="fs-18 text-primary">voir plus</h5></Link>
             </div>
           </a>
         </div>
