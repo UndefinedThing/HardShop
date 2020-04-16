@@ -18,7 +18,7 @@ class Header extends Component {
               <Nav.Link href="/News">News</Nav.Link>
               <Nav.Link href="/Configuration">Configuration</Nav.Link>
               <NavDropdown title="Composants" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="">Processeur</NavDropdown.Item>
+                <NavDropdown.Item href="/CPU">Processeur</NavDropdown.Item>
                 <NavDropdown.Item href="">Carte Mère</NavDropdown.Item>
                 <NavDropdown.Item href="">RAM</NavDropdown.Item>
                 <NavDropdown.Item href="">Carte Graphique</NavDropdown.Item>

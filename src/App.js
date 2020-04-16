@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./pages/home";
 import CRUD from "./components/CRUD/CRUD";
 import Connection from "./pages/ConnectPage";
-import Cards from "./components/NCC/Composants"
+import Processeur from "./pages/pages_composants/CPU"
 
 function App() {
   return (
@@ -22,8 +22,8 @@ function App() {
           <Route path="/Auth">
             <Connection />
           </Route>
-          <Route path="/Card">
-            <Cards/>
+          <Route path="/CPU">
+            <Processeur />
           </Route>
           <Route path="/News">
             <Home/>
