@@ -7,6 +7,10 @@ import Home from "./pages/home";
 import CRUD from "./components/CRUD/CRUD";
 import Connection from "./pages/ConnectPage";
 import Processeur from "./pages/pages_composants/CPU"
+import Boîtier from "./pages/pages_composants/Boîtier";
+import Refroidissement from "./pages/pages_composants/Refroidissement";
+import Carte_Mère from "./pages/pages_composants/Carte_Mère";
+import Mémoire from "./pages/pages_composants/Mémoire";
 
 function App() {
   return (
@@ -24,6 +28,18 @@ function App() {
           </Route>
           <Route path="/CPU">
             <Processeur />
+          </Route>
+          <Route path="/Boîtier">
+            <Boîtier/>
+          </Route>
+          <Route path="/Carte_Mère">
+            <Carte_Mère />
+          </Route>
+          <Route path="/Mémoire">
+            <Mémoire />
+          </Route>
+          <Route path="/Refroidissement">
+            <Refroidissement />
           </Route>
           <Route path="/News">
             <Home/>
