@@ -30,7 +30,7 @@ const content = [
     title: "Phasellus volutpat metus",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula.",
-    button: <Link>Buy now</Link>,
+    button: "Buy now",
     image: "https://i.imgur.com/DvmN8Hx.jpg",
     user: "L'équipe HardShop",
     userProfile: "https://imgur.com/u7h24fM.jpg",
@@ -53,7 +53,7 @@ class Slid extends Component {
               <div className="inner">
                 <h1>{item.title}</h1>
                 <p>{item.description}</p>
-                <Link to=""><button>{item.button}</button></Link>
+                <Link to="/News"><button>{item.button}</button></Link>
               </div>
               <section>
                 <img src={item.userProfile} alt={item.user} />

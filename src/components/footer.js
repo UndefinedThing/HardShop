@@ -1,28 +1,29 @@
 import React, { Component } from "react";
 import hardware from "../Images/hardware.jpg";
+import { Link } from "react-router-dom";
 class Footer extends Component {
     render() {
         return(
             <footer className="bg-dark">
                 <div className="container">
                     <div className="row gutter-3">
-                    <div className="col-12 col-md-2">
-                        <a href="/"><img src={hardware} alt="Logo" /></a>
-                    </div>
+                    <Link to="/" className="col-5 col-md-2">
+                        <div><img src={hardware} alt="Logo" /></div>
+                    </Link>
                     <div className="col-12 col-md-6 text-white">
                         <p className="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         <div className="row">
                         <div className="col">
                             <ul className="list-group list-group-minimal">
-                            <li className="list-group-item"><a href="https://www.facebook.com/geeke.tonerd.9" className="link">FaceBook</a></li>
-                            <li className="list-group-item"><a href="https://www.instagram.com/geek2_nerd/?hl=fr" className="link">Instagram</a></li>
-                            <li className="list-group-item"><a href="https://twitter.com/Geek2Nerd1" className="link">Twitter</a></li>
+                            <li className="list-group-item"><div href="https://www.facebook.com/geeke.tonerd.9" className="link">FaceBook</div></li>
+                            <li className="list-group-item"><div href="https://www.instagram.com/geek2_nerd/?hl=fr" className="link">Instagram</div></li>
+                            <li className="list-group-item"><div href="https://twitter.com/Geek2Nerd1" className="link">Twitter</div></li>
                             </ul>
                         </div>
                         <div className="col">
                             <ul className="list-group list-group-minimal">
-                            <li className="list-group-item"><a href className="link">REST API</a></li>
-                            <li className="list-group-item"><a href className="link">Corporate</a></li>
+                                <li className="list-group-item"><div className="link">REST API</div></li>
+                                <li className="list-group-item"><div className="link">Corporate</div></li>
                             </ul>
                         </div>
                         </div>

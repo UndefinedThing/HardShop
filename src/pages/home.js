@@ -79,83 +79,61 @@ class Home extends Component {
         </div>
       </div>
       <div className="row gutter-1">
-        <div className="col-6 col-md-4 col-lg-2">
-          <a title="CPU" className="card bordered highlight">
-            <div className="card-body text-center px-0 py-1 py-md-2 py-lg-3">
-              <Link to="/CPU"><h5 className="fs-18">Processeur</h5></Link>
+        <Link to="/CPU" className="col-6 col-md-4 col-lg-2">
+            <div title="CPU" className="card-body text-center px-0 py-1 py-md-2 py-lg-3 card bordered highlight">
+              <h5 className="fs-18">Processeur</h5>
             </div>
-          </a>
-        </div>
-        <div className="col-6 col-md-4 col-lg-2">
-          <a title="Carte Graphique" className="card bordered highlight">
-            <div className="card-body text-center px-0 py-1 py-md-2 py-lg-3">
-              <Link to=""><h5 className="fs-18">Carte Graphiques</h5></Link>
+        </Link>
+        <Link to="" className="col-6 col-md-4 col-lg-2">
+            <div title="Carte Graphique" className="card-body text-center px-0 py-1 py-md-2 py-lg-3 card bordered highlight">
+              <h5 className="fs-18">Carte Graphiques</h5>
             </div>
-          </a>
-        </div>
-        <div className="col-6 col-md-4 col-lg-2">
-          <a title="Carte Mère" className="card bordered highlight">
-            <div className="card-body text-center px-0 py-1 py-md-2 py-lg-3">
-              <Link to="/Carte_Mère"><h5 className="fs-18">Carte Mère</h5></Link>
+        </Link>
+        <Link to="/Carte_Mère" className="col-6 col-md-4 col-lg-2">
+            <div title="Carte Mère" className="card-body text-center px-0 py-1 py-md-2 py-lg-3 card bordered highlight">
+              <h5 className="fs-18">Carte Mère</h5>
             </div>
-          </a>
-        </div>
-        <div className="col-6 col-md-4 col-lg-2">
-          <a title="RAM" className="card bordered highlight">
-            <div className="card-body text-center px-0 py-1 py-md-2 py-lg-3">
-              <Link to="/Mémoire"><h5 className="fs-18">RAM</h5></Link>
+        </Link>
+        <Link to="/Mémoire" className="col-6 col-md-4 col-lg-2">
+            <div title="RAM" className="card-body text-center px-0 py-1 py-md-2 py-lg-3 card bordered highlight">
+              <h5 className="fs-18">RAM</h5>
             </div>
-          </a>
-        </div>
-        <div className="col-6 col-md-4 col-lg-2">
-          <a title="Refroidissement" className="card bordered highlight">
-            <div className="card-body text-center px-0 py-1 py-md-2 py-lg-3">
-              <Link to="/Refroidissement"><h5 className="fs-18">Refroidissement</h5></Link>
+        </Link>
+        <Link to="/Refroidissement" className="col-6 col-md-4 col-lg-2">
+            <div title="Refroidissement" className="card-body text-center px-0 py-1 py-md-2 py-lg-3 card bordered highlight">
+              <h5 className="fs-18">Refroidissement</h5>
             </div>
-          </a>
-        </div>
-        <div className="col-6 col-md-4 col-lg-2">
-          <a title="SSD" className="card bordered highlight">
-            <div className="card-body text-center px-0 py-1 py-md-2 py-lg-3">
-              <Link><h5 className="fs-18">SSD</h5></Link>
+        </Link>
+        <Link className="col-6 col-md-4 col-lg-2">
+            <div title="SSD" className="card-body text-center px-0 py-1 py-md-2 py-lg-3 card bordered highlight">
+              <h5 className="fs-18">SSD</h5>
             </div>
-          </a>
-        </div>
-        <div className="col-6 col-md-4 col-lg-2">
-          <a title="Alimentation" className="card bordered highlight">
-            <div className="card-body text-center px-0 py-1 py-md-2 py-lg-3">
-              <Link><h5 className="fs-18">Alimentation</h5></Link>
+        </Link>
+        <Link className="col-6 col-md-4 col-lg-2">
+            <div title="Alimentation" className="card-body text-center px-0 py-1 py-md-2 py-lg-3 card bordered highlight">
+              <h5 className="fs-18">Alimentation</h5>
             </div>
-          </a>
-        </div>
-        <div className="col-6 col-md-4 col-lg-2">
-          <a title="Boîtier" className="card bordered highlight">
-            <div className="card-body text-center px-0 py-1 py-md-2 py-lg-3">
-              <Link to="/Boîtier"><h5 className="fs-18">Boîtier</h5></Link>
+        </Link>
+        <Link to="/Boîtier" className="col-6 col-md-4 col-lg-2">
+            <div title="Boîtier" className="card-body text-center px-0 py-1 py-md-2 py-lg-3 card bordered highlight">
+              <h5 className="fs-18">Boîtier</h5>
             </div>
-          </a>
-        </div>
-        <div className="col-6 col-md-4 col-lg-2">
-          <a title="HDD" className="card bordered highlight">
-            <div className="card-body text-center px-0 py-1 py-md-2 py-lg-3">
-              <Link><h5 className="fs-18">HDD</h5></Link>
+        </Link>
+        <Link to="/SSD"className="col-6 col-md-4 col-lg-2">
+            <div title="HDD" className="card-body text-center px-0 py-1 py-md-2 py-lg-3 card bordered highlight">
+              <h5 className="fs-18">HDD</h5>
             </div>
-          </a>
-        </div>
-        <div className="col-6 col-md-4 col-lg-2">
-          <a title="OS" className="card bordered highlight">
-            <div className="card-body text-center px-0 py-1 py-md-2 py-lg-3">
-              <Link><h5 className="fs-18">OS</h5></Link>
+        </Link>
+        <Link className="col-6 col-md-4 col-lg-2">
+            <div title="OS" className="card-body text-center px-0 py-1 py-md-2 py-lg-3 card bordered highlight">
+              <h5 className="fs-18">OS</h5>
             </div>
-          </a>
-        </div>
-        <div className="col-6 col-md-4 col-lg-2">
-          <a title="voir plus" className="card bordered highlight">
-            <div className="card-body text-center py-1 py-md-2 py-lg-3 action">
-              <Link to=""><h5 className="fs-18 text-primary">voir plus</h5></Link>
+        </Link>
+        <Link to="/view_all" className="col-6 col-md-4 col-lg-2">
+            <div title="voir plus" className="card-body text-center py-1 py-md-2 py-lg-3 action card bordered highlight">
+              <h5 className="fs-18 text-primary">voir plus</h5>
             </div>
-          </a>
-        </div>
+        </Link>
       </div>
     </div>
   </section>
@@ -171,7 +149,7 @@ class Home extends Component {
             <div className="row">
               <div className="col text-white">
                 <h2>Next Level of <b>Documentation</b></h2>
-                <p className="lead">Purchase Guidebook now, and make documenting your project piece of cake. <a href className="action text-white">Buy Now</a></p>
+                <div className="lead">Purchase Guidebook now, and make documenting your project piece of cake. <div className="action text-white">Buy Now</div></div>
               </div>
             </div>
           </div>

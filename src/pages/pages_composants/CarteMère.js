@@ -5,7 +5,7 @@ import Header from "../../components/header";
 const firebase = require("firebase");
 require("firebase/firestore");
 
-class Carte_Mère extends React.Component {
+class CarteMère extends React.Component {
     constructor() {
         super();
         this.ref = firebase.firestore().collection("MotherBoard");
@@ -74,4 +74,4 @@ class Carte_Mère extends React.Component {
     }
 }
 
-export default Carte_Mère;
+export default CarteMère;

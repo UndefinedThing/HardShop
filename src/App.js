@@ -9,7 +9,7 @@ import Connection from "./pages/ConnectPage";
 import Processeur from "./pages/pages_composants/CPU"
 import Boîtier from "./pages/pages_composants/Boîtier";
 import Refroidissement from "./pages/pages_composants/Refroidissement";
-import Carte_Mère from "./pages/pages_composants/Carte_Mère";
+import CarteMère from "./pages/pages_composants/CarteMère";
 import Mémoire from "./pages/pages_composants/Mémoire";
 
 function App() {
@@ -32,8 +32,8 @@ function App() {
           <Route path="/Boîtier">
             <Boîtier/>
           </Route>
-          <Route path="/Carte_Mère">
-            <Carte_Mère />
+          <Route path="/CarteMère">
+            <CarteMère />
           </Route>
           <Route path="/Mémoire">
             <Mémoire />
