@@ -11,6 +11,7 @@ import Boîtier from "./pages/pages_composants/Boîtier";
 import Refroidissement from "./pages/pages_composants/Refroidissement";
 import CarteMère from "./pages/pages_composants/CarteMère";
 import Mémoire from "./pages/pages_composants/Mémoire";
+import DisqueDur from "./pages/pages_composants/HDD";
 
 function App() {
   return (
@@ -40,6 +41,9 @@ function App() {
           </Route>
           <Route path="/Refroidissement">
             <Refroidissement />
+          </Route>
+          <Route path="/HDD">
+            <DisqueDur />
           </Route>
           <Route path="/News">
             <Home/>

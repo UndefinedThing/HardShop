@@ -53,14 +53,12 @@ class Memoire extends React.Component {
                         <Card.Body>
                             <Card.Title><h4>Nom : {Memoire.nom}</h4></Card.Title>
                             <Card.Text>
-                                <ul>
                                     <li><b>Quantité :</b> {Memoire.quantité}</li>
                                     <li><b>Fréquence :</b> {Memoire.fréquence}</li>
                                     <li><b>Capacité :</b> {Memoire.capacité}</li>
-                                </ul>
                             </Card.Text>
                             
-                            <Button variant="primary">Descriptif</Button>
+                            <Button variant="primary">Voir plus</Button>
                         </Card.Body>
                     </Card>
                     </div>

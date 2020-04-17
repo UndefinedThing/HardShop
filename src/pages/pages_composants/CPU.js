@@ -1,6 +1,7 @@
 import React from "react";
 import { Card , CardDeck, Button } from "react-bootstrap";
 import Header from "../../components/header";
+import Footer from "../../components/footer";
 
 const firebase = require("firebase");
 require("firebase/firestore");
@@ -54,8 +55,8 @@ class Processeur extends React.Component {
             <CardDeck>
                 
                 {this.state.Proco.map(Proco =>
-                    <div className="pt-5 pl-5">
-                        <Card style={{ width: '12rem' }}>
+                    <div className="pt-5 pl-5 pb-4">
+                        <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={Proco.img} />
                         <Card.Body>
                             <Card.Title><h4>Nom : {Proco.nom}</h4></Card.Title>
@@ -64,13 +65,14 @@ class Processeur extends React.Component {
                                 Fréquence : {Proco.fréquence}  ({Proco.fréquence_boost} en Boost)
                             </Card.Text>
                             
-                            <Button variant="primary">Go somewhere</Button>
+                            <Button variant="primary">Voir plus</Button>
                         </Card.Body>
                     </Card>
                     </div>
                 )}
                 
             </CardDeck>
+            <Footer/>
             </div>
         )
     }

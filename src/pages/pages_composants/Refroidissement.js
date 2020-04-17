@@ -55,14 +55,12 @@ class Refroidissement extends React.Component {
                         <Card.Body>
                             <Card.Title><h4>Nom : {Refroidissement.nom}</h4></Card.Title>
                             <Card.Text>
-                                <ul>
                                     <li><b>Type :</b> {Refroidissement.type}</li>
                                     <li><b>Compatible socket :</b> {Refroidissement.socket}</li>
                                     <li><b>Format :</b> {Refroidissement.format}</li>
-                                </ul>
                             </Card.Text>
                             
-                            <Button variant="primary">Descriptif</Button>
+                            <Button variant="primary">Voir plus</Button>
                         </Card.Body>
                     </Card>
                     </div>
