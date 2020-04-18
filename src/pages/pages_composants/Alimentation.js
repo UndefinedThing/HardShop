@@ -6,7 +6,7 @@ import Footer from "../../components/footer";
 const firebase = require("firebase");
 require("firebase/firestore");
 
-class PSU extends React.Component {
+class Alim extends React.Component {
     constructor() {
         super();
         this.ref = firebase.firestore().collection("PowerSupply");
@@ -20,7 +20,7 @@ class PSU extends React.Component {
         const PSU = [];
         querySnapshot.forEach((doc) => {
           const { img, certif, format, marque, modulaire, nom, puissance } = doc.data();
-            SSD.push({
+            PSU.push({
                 key: doc.id,
                 doc,
                 certif,
@@ -72,4 +72,4 @@ class PSU extends React.Component {
     }
 }
 
-export default PSU;
+export default Alim;

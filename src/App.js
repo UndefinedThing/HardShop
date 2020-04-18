@@ -13,7 +13,7 @@ import CarteMère from "./pages/pages_composants/CarteMère";
 import Mémoire from "./pages/pages_composants/Mémoire";
 import DisqueDur from "./pages/pages_composants/HDD";
 import SSD from "./pages/pages_composants/SSD";
-import PSU from "./components/CRUD/Powersupply";
+import Alim from "./pages/pages_composants/Alimentation";
 
 function App() {
   return (
@@ -51,7 +51,7 @@ function App() {
             <SSD />
           </Route>
           <Route path="/PSU">
-            <PSU />
+            <Alim />
           </Route>
           <Route path="/News">
             <Home/>

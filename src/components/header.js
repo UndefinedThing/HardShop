@@ -30,7 +30,6 @@ class Header extends Component {
                 <NavDropdown.Item href="">OS</NavDropdown.Item>
               </NavDropdown>
               <NavDropdown title="Paramètres" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="/CRUDs">Config</NavDropdown.Item>
                 <NavDropdown.Item href="/boutique">Boutique</NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="/Card">
