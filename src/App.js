@@ -12,6 +12,8 @@ import Refroidissement from "./pages/pages_composants/Refroidissement";
 import CarteMère from "./pages/pages_composants/CarteMère";
 import Mémoire from "./pages/pages_composants/Mémoire";
 import DisqueDur from "./pages/pages_composants/HDD";
+import SSD from "./pages/pages_composants/SSD";
+import PSU from "./components/CRUD/Powersupply";
 
 function App() {
   return (
@@ -44,6 +46,12 @@ function App() {
           </Route>
           <Route path="/HDD">
             <DisqueDur />
+          </Route>
+          <Route path="/SSD">
+            <SSD />
+          </Route>
+          <Route path="/PSU">
+            <PSU />
           </Route>
           <Route path="/News">
             <Home/>

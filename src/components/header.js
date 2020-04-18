@@ -23,8 +23,8 @@ class Header extends Component {
                 <NavDropdown.Item href="/Mémoire">RAM</NavDropdown.Item>
                 <NavDropdown.Item href="">Carte Graphique</NavDropdown.Item>
                 <NavDropdown.Item href="/Refroidissement">Refroidissement</NavDropdown.Item>
-                <NavDropdown.Item href="">SSD</NavDropdown.Item>
-                <NavDropdown.Item href="">Alimentation PC</NavDropdown.Item>
+                <NavDropdown.Item href="/SSD">SSD</NavDropdown.Item>
+                <NavDropdown.Item href="/PSU">Alimentation PC</NavDropdown.Item>
                 <NavDropdown.Item href="/Boîtier">Boîtier</NavDropdown.Item>
                 <NavDropdown.Item href="/HDD">HDD</NavDropdown.Item>
                 <NavDropdown.Item href="">OS</NavDropdown.Item>

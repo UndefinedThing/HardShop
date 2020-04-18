@@ -104,12 +104,12 @@ class Home extends Component {
               <h5 className="fs-18">Refroidissement</h5>
             </div>
         </Link>
-        <Link className="col-6 col-md-4 col-lg-2">
+        <Link to="/SSD"className="col-6 col-md-4 col-lg-2">
             <div title="SSD" className="card-body text-center px-0 py-1 py-md-2 py-lg-3 card bordered highlight">
               <h5 className="fs-18">SSD</h5>
             </div>
         </Link>
-        <Link className="col-6 col-md-4 col-lg-2">
+        <Link to="/PSU" className="col-6 col-md-4 col-lg-2">
             <div title="Alimentation" className="card-body text-center px-0 py-1 py-md-2 py-lg-3 card bordered highlight">
               <h5 className="fs-18">Alimentation</h5>
             </div>
