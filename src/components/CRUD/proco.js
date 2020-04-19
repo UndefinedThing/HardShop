@@ -1,152 +1,118 @@
-import React from "../../../node_modules/react";
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
-const firebase = require("../../../node_modules/firebase");
-require("../../../node_modules/firebase/firestore");
+const firebase = require("firebase");
+require("firebase/firestore");
 
-class CPU extends React.Component {
-  constructor() {
-    super();
+class Proco extends Component {
+  constructor(props) {
+    super(props);
+    this.ref = firebase.firestore().collection("CPU's");
+    this.unsubscribe = null;
     this.state = {
-      architecture: "",
-      cache: "",
-      chipset: "",
-      "chipset graphique": "",
-      fréquence: "",
-      fréquence_boost: "",
-      nb_coeur: "",
-      nb_threads: "",
-      nom: "",
-      overclocking: "",
-      socket: "",
-      type: "",
+      CPU: [],
     };
   }
 
-  addCPU = (e) => {
-    e.preventDefault();
-    const db = firebase.firestore();
-    db.settings({
-      timestampsInSnapshots: true,
-    });
-    db.collection("CPU's").add({
-      architecture: this.state.architecture,
-      cache: this.state.cache,
-      chipset: this.state.chipset,
-      "chipset graphique": this.state["chipset graphique"],
-      fréquence: this.state.fréquence,
-      fréquence_boost: this.state.fréquence_boost,
-      nb_coeur: this.state.nb_coeur,
-      nb_threads: this.state.nb_threads,
-      nom: this.state.nom,
-      overclocking: this.state.overclocking,
-      socket: this.state.socket,
-      type: this.state.type,
+  onCollectionUpdate = (querySnapshot) => {
+    const CPU = [];
+    querySnapshot.forEach((doc) => {
+      const {
+        title,
+        architecture,
+        cache,
+        chipset,
+        chipset_graphique,
+        fréquence,
+        fréquence_boost,
+        nb_coeur,
+        nb_threads,
+        nom,
+        overclocking,
+        socket,
+        type,
+      } = doc.data();
+      CPU.push({
+        key: doc.id,
+        doc,
+        title,
+        architecture,
+        cache,
+        chipset,
+        chipset_graphique,
+        fréquence,
+        fréquence_boost,
+        nb_coeur,
+        nb_threads,
+        nom,
+        overclocking,
+        socket,
+        type,
+      });
     });
     this.setState({
-      architecture: "",
-      cache: "",
-      chipset: "",
-      "chipset graphique": "",
-      fréquence: "",
-      fréquence_boost: "",
-      nb_coeur: "",
-      nb_threads: "",
-      nom: "",
-      overclocking: "",
-      socket: "",
-      type: "",
+      CPU,
     });
   };
-  updateInput = (e) => {
-    this.setState({
-      [e.target.name]: e.target.value,
-    });
-  };
+
+  componentDidMount() {
+    this.unsubscribe = this.ref.onSnapshot(this.onCollectionUpdate);
+  }
+
   render() {
     return (
-      <form onSubmit={this.addCPU}>
-        <input
-          type="text"
-          name="architecture"
-          placeholder="architecture"
-          value={this.state.architecture}
-          onChange={this.updateInput}
-        />
-        <input
-          type="text"
-          name="cache"
-          placeholder="cache"
-          value={this.state.cache}
-          onChange={this.updateInput}
-        />
-        <input
-          type="text"
-          name="chipset graphique"
-          placeholder="chipset graphique"
-          value={this.state["chipset graphique"]}
-          onChange={this.updateInput}
-        />
-        <input
-          type="text"
-          name="fréquence"
-          placeholder="fréquence"
-          value={this.state.fréquence}
-          onChange={this.updateInput}
-        />
-
-        <input
-          type="text"
-          name="fréquence boost"
-          placeholder="fréquence boost"
-          value={this.state.fréquence_boost}
-          onChange={this.updateInput}
-        />
-        <input
-          type="text"
-          name="Nombre coeur"
-          placeholder="Nombre coeur"
-          value={this.state.nb_coeur}
-          onChange={this.updateInput}
-        />
-        <input
-          type="text"
-          name="Nombre Threads"
-          placeholder="Nombre Threads"
-          value={this.state.nb_threads}
-          onChange={this.updateInput}
-        />
-        <input
-          type="text"
-          name="overclocking"
-          placeholder="overclocking"
-          value={this.state.overclocking}
-          onChange={this.updateInput}
-        />
-        <input
-          type="text"
-          name="socket"
-          placeholder="socket"
-          value={this.state.socket}
-          onChange={this.updateInput}
-        />
-        <input
-          type="text"
-          name="nom"
-          placeholder="nom"
-          value={this.state.nom}
-          onChange={this.updateInput}
-        />
-        <input
-          type="text"
-          name="type"
-          placeholder="type"
-          value={this.state.type}
-          onChange={this.updateInput}
-        />
-        <button type="submit">Submit</button>
-      </form>
+      <div class="container">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">CPU LIST</h3>
+          </div>
+          <div class="panel-body">
+            <h4>
+              <Link to="/create">Add Board</Link>
+            </h4>
+            <table class="table table-stripe">
+              <thead>
+                <tr>
+                  <th>Nom</th>
+                  <th>NB Coeur</th>
+                  <th>NB Threads</th>
+                  <th>Fréquence</th>
+                  <th>Fréquence Boost</th>
+                  <th>Cache</th>
+                  <th>Socket</th>
+                  <th>Architecture</th>
+                  <th>Chipset</th>
+                  <th>Chipset Graphique</th>
+                  <th>Overclocking</th>
+                  <th>Type</th>
+                </tr>
+              </thead>
+              <tbody>
+                {this.state.CPU.map((CPU) => (
+                  <tr>
+                    <td>
+                      <Link to={`/show/${CPU.key}`}>{CPU.nom}</Link>
+                    </td>
+                    <td>{CPU.nb_coeur}</td>
+                    <td>{CPU.nb_threads}</td>
+                    <td>{CPU.fréquence}</td>
+                    <td>{CPU.fréquence_boost}</td>
+                    <td>{CPU.cache}</td>
+                    <td>{CPU.socket}</td>
+                    <td>{CPU.architecture}</td>
+                    <td>{CPU.chipset}</td>
+                    <td>{CPU.chipset_graphique}</td>
+                    <td>{CPU.overclocking}</td>
+                    <td>{CPU.type}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     );
   }
 }
 
-export default CPU;
+export default Proco;

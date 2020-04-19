@@ -1,100 +1,98 @@
-import React from "../../../node_modules/react";
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
-const firebase = require("../../../node_modules/firebase");
-require("../../../node_modules/firebase/firestore");
+const firebase = require("firebase");
+require("firebase/firestore");
 
-class MB extends React.Component {
-  constructor() {
-    super();
+class MB extends Component {
+  constructor(props) {
+    super(props);
+    this.ref = firebase.firestore().collection("MotherBoard");
+    this.unsubscribe = null;
     this.state = {
-      chipset: "",
-      constructeur: "",
-      format: "",
-      fréquence_mémoire: "",
-      nom: "",
-      proco_compatible: "",
-      socket: "",
+      motherboard: [],
     };
   }
-  addMB = (e) => {
-    e.preventDefault();
-    const db = firebase.firestore();
-    db.settings({
-      timestampsInSnapshots: true,
-    });
-    const mbRef = db.collection("MotherBoard").add({
-      chipset: this.state.chipset,
-      constructeur: this.state.constructeur,
-      format: this.state.format,
-      fréquence_mémoire: this.state.fréquence_mémoire,
-      nom: this.state.nom,
-      proco_compatible: this.state.proco_compatible,
-      socket: this.state.socket,
+
+  onCollectionUpdate = (querySnapshot) => {
+    const motherboard = [];
+    querySnapshot.forEach((doc) => {
+      const {
+        title,
+        chipset,
+        constructeur,
+        format,
+        fréquence_mémoire,
+        nom,
+        proco_compatible,
+        socket,
+      } = doc.data();
+      motherboard.push({
+        key: doc.id,
+        doc,
+        title,
+        chipset,
+        constructeur,
+        format,
+        fréquence_mémoire,
+        nom,
+        proco_compatible,
+        socket,
+      });
     });
     this.setState({
-      chipset: "",
-      constructeur: "",
-      format: "",
-      fréquence_mémoire: "",
-      nom: "",
-      proco_compatible: "",
-      socket: "",
+      motherboard,
     });
-    console.log(mbRef);
   };
 
-  updateInput = (e) => {
-    this.setState({
-      [e.target.name]: e.target.value,
-    });
-  };
+  componentDidMount() {
+    this.unsubscribe = this.ref.onSnapshot(this.onCollectionUpdate);
+  }
+
   render() {
     return (
-      <form onSubmit={this.addMB}>
-        <input
-          type="text"
-          name="chipset"
-          placeholder="socket"
-          onChange={this.updateInput}
-          value={this.state.chipset}
-        />
-        <input
-          type="text"
-          name="constructeur"
-          placeholder="constructeur"
-          onChange={this.updateInput}
-          value={this.state.constructeur}
-        />
-        <input
-          type="text"
-          name="format"
-          placeholder="format"
-          onChange={this.updateInput}
-          value={this.state.format}
-        />
-        <input
-          type="text"
-          name="nom"
-          placeholder="nom"
-          onChange={this.updateInput}
-          value={this.state.nom}
-        />
-        <input
-          type="text"
-          name="proco_compatible"
-          placeholder="proco_compatible"
-          onChange={this.updateInput}
-          value={this.state.proco_compatible}
-        />
-        <input
-          type="text"
-          name="socket"
-          placeholder="socket"
-          onChange={this.updateInput}
-          value={this.state.socket}
-        />
-        <button type="submit">Submit</button>
-      </form>
+      <div class="container">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">MotherBoard LIST</h3>
+          </div>
+          <div class="panel-body">
+            <h4>
+              <Link to="/create">Add Board</Link>
+            </h4>
+            <table class="table table-stripe">
+              <thead>
+                <tr>
+                  <th>Nom</th>
+                  <th>Constructeur</th>
+                  <th>Format</th>
+                  <th>Fréquence Mémoire</th>
+                  <th>Chipset</th>
+                  <th>Socket</th>
+                  <th>Proco Compatible</th>
+                </tr>
+              </thead>
+              <tbody>
+                {this.state.motherboard.map((motherboard) => (
+                  <tr>
+                    <td>
+                      <Link to={`/show/${motherboard.key}`}>
+                        {motherboard.nom}
+                      </Link>
+                    </td>
+                    <td>{motherboard.constructeur}</td>
+                    <td>{motherboard.format}</td>
+                    <td>{motherboard.fréquence_mémoire}</td>
+                    <td>{motherboard.chipset}</td>
+                    <td>{motherboard.socket}</td>
+                    <td>{motherboard.proco_compatible}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     );
   }
 }

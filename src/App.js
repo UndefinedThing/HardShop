@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./pages/home";
 import CRUD from "./components/CRUD/CRUD";
 import Connection from "./pages/ConnectPage";
-import Processeur from "./pages/pages_composants/CPU"
+import Processeur from "./pages/pages_composants/CPU";
 import Boîtier from "./pages/pages_composants/Boîtier";
 import Refroidissement from "./pages/pages_composants/Refroidissement";
 import CarteMère from "./pages/pages_composants/CarteMère";
@@ -23,7 +23,7 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/CRUDs">
+          <Route path="/Crud">
             <CRUD />
           </Route>
           <Route path="/Auth">
@@ -33,7 +33,7 @@ function App() {
             <Processeur />
           </Route>
           <Route path="/Boîtier">
-            <Boîtier/>
+            <Boîtier />
           </Route>
           <Route path="/CarteMère">
             <CarteMère />
@@ -54,10 +54,10 @@ function App() {
             <Alim />
           </Route>
           <Route path="/News">
-            <Home/>
+            <Home />
           </Route>
           <Route path="/Configuration">
-            <Home/>
+            <Home />
           </Route>
         </Switch>
       </Router>

@@ -23,7 +23,7 @@ class Footer extends Component {
                         <div className="col">
                             <ul className="list-group list-group-minimal">
                                 <li className="list-group-item"><div className="link">REST API</div></li>
-                                <li className="list-group-item"><div className="link">Corporate</div></li>
+                                <li className="list-group-item"><div className="link">Qui-sommes nous ?</div></li>
                             </ul>
                         </div>
                         </div>
