@@ -48,7 +48,7 @@ class Memoire extends React.Component {
             <CardDeck>
                 {this.state.Memoire.map(Memoire =>
                     <div className="pt-5 pl-2">
-                        <Card style={{ width: '12rem' }}>
+                        <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={Memoire.img} />
                         <Card.Body>
                             <Card.Title><h4>Nom : {Memoire.nom}</h4></Card.Title>

@@ -51,7 +51,7 @@ class Boîtier extends React.Component {
                     
                     {this.state.Boîtier.map(Boîtier =>
                         <div className="pt-5 pl-2">
-                            <Card style={{ width: '12rem' }}>
+                            <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={Boîtier.img} />
                             <Card.Body>
                                 <Card.Title><h4>Nom : {Boîtier.nom}</h4></Card.Title>
