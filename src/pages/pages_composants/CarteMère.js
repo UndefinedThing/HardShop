@@ -12,15 +12,15 @@ class CarteMère extends React.Component {
         this.ref = firebase.firestore().collection("MotherBoard");
         this.unsubscribe = null;
         this.state = {
-            Carte_Mère: []
+            CarteMère: []
     };
     }
     
     onCollectionUpdate = (querySnapshot) => {
-        const Carte_Mère = [];
+        const CarteMère = [];
         querySnapshot.forEach((doc) => {
           const { img, chipset, constructeur, format, fréquence_mémoire, nom, proco_compatible, socket } = doc.data();
-            Carte_Mère.push({
+            CarteMère.push({
                 key: doc.id,
                 doc,
                 chipset,
@@ -35,7 +35,7 @@ class CarteMère extends React.Component {
             });
         });
         this.setState({
-          Carte_Mère
+          CarteMère
        });
     }
         
@@ -49,16 +49,16 @@ class CarteMère extends React.Component {
             <Header />
             <CardDeck>
                 
-                {this.state.Carte_Mère.map(Carte_Mère =>
+                {this.state.CarteMère.map(CarteMère =>
                     <div className="pt-5 pl-2 pb-4">
-                        <Card style={{ width: '12rem' }}>
-                        <Card.Img variant="top" src={Carte_Mère.img} />
+                        <Card style={{ width: '18rem' }}>
+                        <Card.Img variant="top" src={CarteMère.img} />
                         <Card.Body>
-                            <Card.Title><h4>Nom : {Carte_Mère.nom}</h4></Card.Title>
+                            <Card.Title><h4>Nom : {CarteMère.nom}</h4></Card.Title>
                             <Card.Text>
-                                    <li><b>Chipset :</b> {Carte_Mère.chipset}</li>
-                                    <li><b>Processeurs compatibles :</b> {Carte_Mère.proco_compatible}</li>
-                                    <li><b>Socket :</b> {Carte_Mère.socket}</li>
+                                    <li><b>Chipset :</b> {CarteMère.chipset}</li>
+                                    <li><b>Processeurs compatibles :</b> {CarteMère.proco_compatible}</li>
+                                    <li><b>Socket :</b> {CarteMère.socket}</li>
                             </Card.Text>
                             
                             <Button variant="primary">Voir plus</Button>

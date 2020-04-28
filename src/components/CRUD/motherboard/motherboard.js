@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 const firebase = require("firebase");
 require("firebase/firestore");
@@ -10,40 +10,32 @@ class MB extends Component {
     this.ref = firebase.firestore().collection("MotherBoard");
     this.unsubscribe = null;
     this.state = {
-      motherboard: [],
+      motherboard: []
     };
   }
 
   onCollectionUpdate = (querySnapshot) => {
     const motherboard = [];
     querySnapshot.forEach((doc) => {
-      const {
-        title,
-        chipset,
-        constructeur,
-        format,
-        fréquence_mémoire,
-        nom,
-        proco_compatible,
-        socket,
-      } = doc.data();
+      const { title, chipset, constructeur, format, fréquence_mémoire, img, nom, proco_compatible, socket } = doc.data();
       motherboard.push({
         key: doc.id,
-        doc,
+        doc, 
         title,
         chipset,
         constructeur,
         format,
         fréquence_mémoire,
+        img,
         nom,
         proco_compatible,
-        socket,
+        socket
       });
     });
     this.setState({
-      motherboard,
-    });
-  };
+      motherboard
+   });
+  }
 
   componentDidMount() {
     this.unsubscribe = this.ref.onSnapshot(this.onCollectionUpdate);
@@ -54,12 +46,12 @@ class MB extends Component {
       <div class="container">
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h3 class="panel-title">MotherBoard LIST</h3>
+            <h3 class="panel-title">
+              HDD LIST
+            </h3>
           </div>
           <div class="panel-body">
-            <h4>
-              <Link to="/create">Add Board</Link>
-            </h4>
+            <h4><Link to="/create">Add Board</Link></h4>
             <table class="table table-stripe">
               <thead>
                 <tr>
@@ -69,25 +61,23 @@ class MB extends Component {
                   <th>Fréquence Mémoire</th>
                   <th>Chipset</th>
                   <th>Socket</th>
-                  <th>Proco Compatible</th>
+                  <th>Processeur compatible</th>
+                  <th>Image</th>
                 </tr>
               </thead>
               <tbody>
-                {this.state.motherboard.map((motherboard) => (
+                {this.state.motherboard.map(motherboard =>
                   <tr>
-                    <td>
-                      <Link to={`/show/${motherboard.key}`}>
-                        {motherboard.nom}
-                      </Link>
-                    </td>
+                    <td><Link to={`/show/${motherboard.key}`}>{motherboard.nom}</Link></td>
                     <td>{motherboard.constructeur}</td>
                     <td>{motherboard.format}</td>
                     <td>{motherboard.fréquence_mémoire}</td>
                     <td>{motherboard.chipset}</td>
                     <td>{motherboard.socket}</td>
                     <td>{motherboard.proco_compatible}</td>
+                    <td>{motherboard.img}</td>
                   </tr>
-                ))}
+                )}
               </tbody>
             </table>
           </div>

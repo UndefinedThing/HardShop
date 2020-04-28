@@ -11,7 +11,7 @@ const content = [
   {
     title: "Prochainement, les nouvelles RTX 3XXX de chez NVidia",
     description:
-      "Ca y est ! Quelques fuites de la part d'NVidia nous ont révélées que celles-ci seront présentées cet Eté 2020. Mais rien n'est encore sur vu le contexte actuel",
+      "Ca y est ! Quelques fuites de la part d'NVidia nous ont révélées que celles-ci seront présentées cet Eté 2020. Mais rien n'est encore sûr vu le contexte actuel",
     button: "Lire plus",
     image: "https://imgur.com/VkmKzQz.jpg",
     user: "L'équipe HardShop",

@@ -13,7 +13,7 @@ class Home extends Component {
                 <Header />
              <div>
   {/* hero */}
-  <section className="bg-primary">
+  <section className="bg-primary pt-4">
     <div className="container">
       <div className="row justify-content-center">
         <div className="col-lg-10 text-white text-center">
@@ -89,7 +89,7 @@ class Home extends Component {
               <h5 className="fs-18">Carte Graphiques</h5>
             </div>
         </Link>
-        <Link to="/Carte_Mère" className="col-6 col-md-4 col-lg-2">
+        <Link to="/CarteMère" className="col-6 col-md-4 col-lg-2">
             <div title="Carte Mère" className="card-body text-center px-0 py-1 py-md-2 py-lg-3 card bordered highlight">
               <h5 className="fs-18">Carte Mère</h5>
             </div>
