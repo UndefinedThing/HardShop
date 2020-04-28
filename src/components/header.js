@@ -14,8 +14,7 @@ class Header extends Component {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
               <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="/News">News</Nav.Link>
-              <Nav.Link href="/Configuration">Configuration</Nav.Link>
+              
               <NavDropdown title="Composants" id="collasible-nav-dropdown">
                 <NavDropdown.Item href="/CPU">Processeur</NavDropdown.Item>
                 <NavDropdown.Item href="/CarteMère">
@@ -32,6 +31,8 @@ class Header extends Component {
                 <NavDropdown.Item href="/HDD">HDD</NavDropdown.Item>
                 <NavDropdown.Item href="">OS</NavDropdown.Item>
               </NavDropdown>
+              <Nav.Link href="/News">News</Nav.Link>
+              <Nav.Link href="/Configuration">Configuration</Nav.Link>
               <NavDropdown title="Paramètres" id="collasible-nav-dropdown">
                 <NavDropdown.Item href="/boutique">Boutique</NavDropdown.Item>
                 <NavDropdown.Divider />

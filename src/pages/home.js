@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 
+
+
 import Header from "../components/header";
 import Footer from "../components/footer";
 import { Link } from "react-router-dom";
 
 import Slid from "../components/Slider/index";
+import Cat from "../components/NCC/render";
 
 class Home extends Component {
     render() {
@@ -50,14 +53,13 @@ class Home extends Component {
         <div className="col-lg-5">
           <div className="row justify-content-center justify-content-lg-end">
             <div className="col-8">
+              <Cat/>
             </div>
           </div>
         </div>
         <div className="col-lg-7">
-          <div className="row mt-3">
-            <div className="col">
+          <div className="row mt-2">
               
-            </div>
           </div>
           <div className="row mt-3 justify-content-center justify-content-lg-start">
             <div className="col-md-6">

@@ -17,7 +17,7 @@ class Cards extends React.Component {
     
     onCollectionUpdate = (querySnapshot) => {
         const Proco = [];
-        querySnapshot.forEach((doc) => {
+        querySnapshot.for((doc) => {
           const { architecture, cache, chipset, chipset_graphique, fréquence, fréquence_boost, nb_coeur, nb_threads, nom, overclocking, socket, type, img } = doc.data();
             Proco.push({
                 key: doc.id,
