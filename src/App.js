@@ -23,7 +23,7 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/Crud">
+          <Route path="/CRUDs">
             <CRUD />
           </Route>
           <Route path="/Auth">
