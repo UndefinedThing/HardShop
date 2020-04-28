@@ -2,7 +2,7 @@ import React from "react";
 import firebase from "../Firebase";
 import { Link } from "react-router-dom";
 
-class Show extends React.Component {
+class ShowSSD extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -91,4 +91,4 @@ class Show extends React.Component {
   }
 }
 
-export default Show;
+export default ShowSSD;
