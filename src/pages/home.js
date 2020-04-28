@@ -50,7 +50,7 @@ class Home extends Component {
         </div>
       </div>
       <div className="row gutter-3 align-items-center">
-        <div className="col-lg-5">
+        <div className="col-lg-2">
           <div className="row justify-content-center justify-content-lg-end">
             <div className="col-8">
               <Cat/>

@@ -46,7 +46,7 @@ class RAM extends Component {
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title">
-              Proco LIST
+              RAM LIST
             </h3>
           </div>
           <div class="panel-body">

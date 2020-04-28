@@ -17,7 +17,7 @@ class Cards extends React.Component {
     
     onCollectionUpdate = (querySnapshot) => {
         const Proco = [];
-        querySnapshot.for((doc) => {
+        querySnapshot.forEach((doc) => {
           const { architecture, cache, chipset, chipset_graphique, fréquence, fréquence_boost, nb_coeur, nb_threads, nom, overclocking, socket, type, img } = doc.data();
             Proco.push({
                 key: doc.id,
@@ -50,27 +50,23 @@ class Cards extends React.Component {
     render() {
         return(
             <div>
-            <Header />
-            <CardDeck>
-                
-                {this.state.Proco.map(Proco =>
-                    <div className="pt-5 pl-5">
-                        <Card style={{ width: '12rem' }}>
-                        <Card.Img variant="top" src={Proco.img} />
-                        <Card.Body>
-                            <Card.Title><h4>Nom : {Proco.nom}</h4></Card.Title>
-                            <Card.Text>
-                                {Proco.nb_coeur} Coeurs ({Proco.nb_threads} threads)
-                                Fréquence : {Proco.fréquence}  ({Proco.fréquence_boost} en Boost)
-                            </Card.Text>
-                            
-                            <Button variant="primary">Go somewhere</Button>
-                        </Card.Body>
-                    </Card>
-                    </div>
-                )}
-                
-            </CardDeck>
+                <CardDeck>
+                    {this.state.Proco.map(Proco =>
+                        <div className="pt-5 pl-5 pb-4">
+                            <Card style={{ width: '18rem' }}>
+                                <Card.Img variant="top" src={this.state.Proco[0].img} />
+                                <Card.Body>
+                                    <Card.Title><h4>Nom : {this.state.Proco[0].nom}</h4></Card.Title>
+                                    <Card.Text>
+                                        {this.state.Proco[0].nb_coeur} Coeurs ({this.state.Proco[0].nb_threads} threads)
+                                        Fréquence : {this.state.Proco[0].fréquence}  ({this.state.Proco[0].fréquence_boost} en Boost)
+                                    </Card.Text>
+                                    <Button variant="primary">Go somewhere</Button>
+                                </Card.Body>
+                            </Card>
+                        </div>
+                    )}
+                </CardDeck>
             </div>
         )
     }

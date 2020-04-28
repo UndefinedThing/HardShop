@@ -7,7 +7,7 @@ require("firebase/firestore");
 class SSD extends Component {
   constructor(props) {
     super(props);
-    this.ref = firebase.firestore().collection("RAM");
+    this.ref = firebase.firestore().collection("SSD's");
     this.unsubscribe = null;
     this.state = {
       solid: []

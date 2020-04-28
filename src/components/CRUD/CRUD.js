@@ -1,7 +1,8 @@
 import React from "react";
 import Header from "../header";
 import Footer from "../footer";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Nav } from "react-bootstrap";
 
 import Processeur from "./CPU/proco";
 import Boîtier from "./Case/Case";
@@ -19,32 +20,33 @@ class CRUD extends React.Component {
         <Header />
         <Router>
           <div>
-            <ul>
-              <li>
-                <Link to="/CRUDs/CASE">Case</Link>
-              </li>
-              <li>
-                <Link to="/CRUDs/COOLING">Cooling</Link>
-              </li>
-              <li>
-                <Link to="/CRUDs/HDD">HDD</Link>
-              </li>
-              <li>
-                <Link to="/CRUDs/SSD">SSD</Link>
-              </li>
-              <li>
-                <Link to="/CRUDs/MOTHERBOARD">MotherBoard</Link>
-              </li>
-              <li>
-                <Link to="/CRUDs/PSU">Powersupply</Link>
-              </li>
-              <li>
-                <Link to="/CRUDs/CPU">CPU</Link>
-              </li>
-              <li>
-                <Link to="/CRUDs/RAM">RAM</Link>
-              </li>
-            </ul>
+            <Nav variant="tabs" className="">
+              <Nav.Item>
+                <Nav.Link href="/CRUDs/CASE">Case</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link href="/CRUDs/COOLING">Cooling</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link href="/CRUDs/HDD">HDD</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link href="/CRUDs/SSD">SSD</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link href="/CRUDs/MOTHERBOARD">MotherBoard</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link href="/CRUDs/PSU">PowerSupply</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link href="/CRUDs/CPU">Processeur</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link href="/CRUDs/RAM">Mémoire</Nav.Link>
+              </Nav.Item>
+            </Nav>
+            
 
             <Switch>
               <Route path="/CRUDs/CASE">
