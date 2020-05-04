@@ -9,6 +9,7 @@
     "bootstrap": "^4.4.1",
     "firebase": "^7.14.0",
     "firebaseui": "^4.5.0",
+    "fund": "^1.0.0",
     "material-auto-rotating-carousel": "^3.0.2",
     "react": "^16.13.1",
     "react-animated-slider": "^2.0.0",
@@ -19,7 +20,8 @@
     "react-scripts": "^3.4.1",
     "react-search-field": "^1.0.0",
     "react-simple-image-slider": "^1.0.3",
-    "react-swipeable-views": "^0.13.9"
+    "react-swipeable-views": "^0.13.9",
+    "sequelize": "^5.21.7"
   },
   "scripts": {
     "start": "react-scripts start",
