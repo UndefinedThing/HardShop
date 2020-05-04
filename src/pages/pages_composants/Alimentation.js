@@ -1,5 +1,6 @@
 import React from "react";
 import { Card , CardDeck, Button } from "react-bootstrap";
+import SearchField from "react-search-field";
 import Header from "../../components/header";
 import Footer from "../../components/footer";
 
@@ -40,11 +41,21 @@ class Alim extends React.Component {
     componentDidMount() {
         this.unsubscribe = this.ref.onSnapshot(this.onCollectionUpdate);
     }
+
+    updateInput = e => {
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+    }
     
     render() {
         return(
             <div>
             <Header />
+            <SearchField
+                placeholder='Chercher'
+                onChange={this.onChange}
+            />
             <CardDeck>
                 
                 {this.state.PSU.map(PSU =>

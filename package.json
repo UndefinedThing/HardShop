@@ -11,6 +11,8 @@
     "firebaseui": "^4.5.0",
     "fund": "^1.0.0",
     "material-auto-rotating-carousel": "^3.0.2",
+    "mdb": "^0.1.0",
+    "mdbreact": "^4.26.0",
     "react": "^16.13.1",
     "react-animated-slider": "^2.0.0",
     "react-bootstrap": "^1.0.0",

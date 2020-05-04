@@ -11,7 +11,7 @@ class Config extends React.Component {
                 <Header/>
                     <div><h1>Une Config ?</h1></div>
                         <div>Vous ne savez pas par où commencer pour faire une configuration ? Pas de soucis nous sommes la pour vous aider</div>
-                    
+                        
                 <Footer/>
             </div>
         )
