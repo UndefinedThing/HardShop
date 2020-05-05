@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-pascal-case */
 import React from "react";
 import "./App.css";
 import "firebase/firestore";
@@ -14,6 +15,7 @@ import Mémoire from "./pages/pages_composants/Mémoire";
 import DisqueDur from "./pages/pages_composants/HDD";
 import SSD from "./pages/pages_composants/SSD";
 import Alim from "./pages/pages_composants/Alimentation";
+import View_all from "./components/view_all/view_all";
 
 function App() {
   return (
@@ -22,6 +24,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Home />
+          </Route>
+          <Route path="/Viewall">
+            <View_all/>
           </Route>
           <Route path="/CRUDs">
             <CRUD />

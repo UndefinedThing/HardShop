@@ -7,7 +7,10 @@ class Who extends React.Component {
         return(
             <div>
                 <Header />
-                    
+                    <div>
+                        <h1>Qui sommes-nous ?</h1>
+                        <p></p>
+                    </div>
                 <Footer />
             </div>
         )

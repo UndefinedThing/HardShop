@@ -71,7 +71,7 @@ class Home extends Component {
   </section>
   {/* / components */}
   {/* categories */}
-  <section className="bg-white">
+  <section className="bg-white pt-3">
     <div className="container">
       <div className="row justify-content-center">
         <div className="col-md-6 text-center">
@@ -131,7 +131,7 @@ class Home extends Component {
               <h5 className="fs-18">OS</h5>
             </div>
         </Link>
-        <Link to="/view_all" className="col-6 col-md-4 col-lg-2">
+        <Link to="/Viewall" className="col-6 col-md-4 col-lg-2">
             <div title="voir plus" className="card-body text-center py-1 py-md-2 py-lg-3 action card bordered highlight">
               <h5 className="fs-18 text-primary">voir plus</h5>
             </div>

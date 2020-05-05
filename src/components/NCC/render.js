@@ -39,7 +39,7 @@ render() {
                   active={this.state.items["content"] === "2"}
                   onClick={this.togglePills("content", "2")}
                 >
-                  Fashion
+                  News
                 </MDBNavLink>
               </MDBNavItem>
               <MDBNavItem>
@@ -49,7 +49,7 @@ render() {
                   active={this.state.items["content"] === "1"}
                   onClick={this.togglePills("content", "1")}
                 >
-                  Lifestyle
+                  Composants
                 </MDBNavLink>
               </MDBNavItem>
               <MDBNavItem>
@@ -59,7 +59,7 @@ render() {
                   active={this.state.items["content"] === "3"}
                   onClick={this.togglePills("content", "3")}
                 >
-                  Beauty
+                  Configs
                 </MDBNavLink>
               </MDBNavItem>
             </MDBNav>
