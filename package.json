@@ -3,14 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ant-design/icons": "^4.1.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "antd": "^4.2.0",
     "bootstrap": "^4.4.1",
     "firebase": "^7.14.0",
     "firebaseui": "^4.5.0",
     "fund": "^1.0.0",
+    "lodash": "^4.17.15",
     "material-auto-rotating-carousel": "^3.0.2",
+    "mauerwerk": "^2.0.2",
     "mdb": "^0.1.0",
     "mdbreact": "^4.26.0",
     "react": "^16.13.1",
@@ -23,7 +27,9 @@
     "react-search-field": "^1.0.0",
     "react-simple-image-slider": "^1.0.3",
     "react-swipeable-views": "^0.13.9",
-    "sequelize": "^5.21.7"
+    "sequelize": "^5.21.7",
+    "sqlite": "^4.0.7",
+    "webpack": "^4.43.0"
   },
   "scripts": {
     "start": "react-scripts start",

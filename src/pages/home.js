@@ -7,7 +7,7 @@ import Footer from "../components/footer";
 import { Link } from "react-router-dom";
 
 import Slid from "../components/Slider/index";
-import Cat from "../components/NCC/render";
+import NCC from "../components/NCC/index";
 
 class Home extends Component {
     render() {
@@ -53,7 +53,7 @@ class Home extends Component {
         <div className="col-lg-2">
           <div className="row justify-content-center justify-content-lg-end">
             <div className="col-8">
-              <Cat/>
+              <NCC/>
             </div>
           </div>
         </div>
