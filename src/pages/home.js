@@ -1,13 +1,8 @@
 import React, { Component } from "react";
-
-
-
 import Header from "../components/header";
 import Footer from "../components/footer";
 import { Link } from "react-router-dom";
-
 import Slid from "../components/Slider/index";
-import NCC from "../components/NCC/index";
 
 class Home extends Component {
     render() {
@@ -53,7 +48,7 @@ class Home extends Component {
         <div className="col-lg-2">
           <div className="row justify-content-center justify-content-lg-end">
             <div className="col-8">
-              <NCC/>
+
             </div>
           </div>
         </div>
