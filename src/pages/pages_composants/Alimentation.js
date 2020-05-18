@@ -1,8 +1,8 @@
 import React from "react";
 import { Card , CardDeck, Button } from "react-bootstrap";
-import SearchField from "react-search-field";
 import Header from "../../components/header";
 import Footer from "../../components/footer";
+import "./style.css";
 
 const firebase = require("firebase");
 require("firebase/firestore");
@@ -14,7 +14,7 @@ class Alim extends React.Component {
         this.unsubscribe = null;
         this.state = {
             PSU: []
-    };
+        };
     }
     
     onCollectionUpdate = (querySnapshot) => {
@@ -52,11 +52,7 @@ class Alim extends React.Component {
         return(
             <div>
             <Header />
-            <SearchField
-                placeholder='Chercher'
-                onChange={this.onChange}
-            />
-            <CardDeck>
+            <CardDeck className="grid">
                 
                 {this.state.PSU.map(PSU =>
                     <div className="pt-5 pl-2 pb-4">
