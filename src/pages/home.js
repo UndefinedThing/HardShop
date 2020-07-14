@@ -48,11 +48,6 @@ class Home extends Component {
         <div className="col-lg-2">
           <div className="row justify-content-center justify-content-lg-end">
             <div className="col-8">
-<<<<<<< HEAD
-
-=======
-              
->>>>>>> ecf1a3804beb82c4e3ffd74e8738ff00ccd068fe
             </div>
           </div>
         </div>
