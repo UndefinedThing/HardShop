@@ -12,7 +12,7 @@
     "firebase": "^7.14.0",
     "firebaseui": "^4.5.0",
     "fund": "^1.0.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "material-auto-rotating-carousel": "^3.0.2",
     "mauerwerk": "^2.0.2",
     "mdb": "^0.1.0",
